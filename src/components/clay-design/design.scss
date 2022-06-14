@@ -1,0 +1,39 @@
+.wpg-design{
+    position: relative;
+    padding-top: 30px;
+  background-color: #82828223;
+
+img{
+    vertical-align: middle;
+}
+
+.static-wpg{
+    position: absolute;
+    top: 33%;
+    left:14%;
+   text-align: left;
+    .blow{
+     display: block;
+     padding-bottom: 14px;
+     font-size: 28px;
+     line-height: 32px;
+     color: #fff;
+    }
+    .textmini{
+        display: block;
+        padding-bottom: 50px;
+        font-size: 15px;
+        line-height: 22px;
+        color: #bebebe;
+    }
+    .shopButton{
+        padding: 11px 25px;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #e09654;
+    }
+
+    }
+}

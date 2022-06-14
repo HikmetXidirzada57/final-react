@@ -1,0 +1,110 @@
+
+.box-category{
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    min-width: 202px;
+    padding: 16px 28px;
+    background-color: #e09654;
+    color: #fff;
+    .menuicon{
+     color: #fff;
+     font-size: 25px;
+     cursor: pointer;
+    }
+    .sidebar-category{
+      position: absolute;
+      background-color: #1C1C1C;
+      vertical-align: baseline;
+      top: 58px;
+      left: 0;
+      z-index: 10;
+      text-align: left;
+      .sidebar-drop{
+        .side-li{
+          &:hover{
+          .sidebar-dc{
+            visibility: visible; 
+            opacity: 1;
+          }
+          }
+        }
+        .sidebar-dc{
+          position: absolute;
+          background-color: #1C1C1C;
+          border-left: 1px solid #363636;
+          visibility: hidden;
+          opacity: 0;
+          transition: 0.5s ease-in-out;
+          right: -100%;
+          top:0;
+        
+          
+        
+          .box{
+            width: 990px;
+            background-color: #1C1C1C;
+            padding: 15px;
+            .titles{
+                font-size: 18px !important;
+                color: #130f0f !important;
+                margin-left: 10px;
+                padding: 0;
+                transition: 0.3s ease-in-out;
+                &:hover{
+                  color: #e09654;
+                }
+              }
+            ul{ 
+              padding: 0;
+              margin: 0;
+              li{
+                
+                a{
+                  border: none;
+                   color: rgb(73, 71, 71) !important;
+                   border: none;
+                   font-size: 14px;
+                   padding:15px;
+                   display: block;
+                   font-weight: 500;
+                   margin: 5px 0;
+                   height: auto !important;
+                   transition: 0.3s ease-in-out;
+            font-family: 'Times New Roman', Times, serif !important;
+
+                   &:hover{
+                     color: #e09654;
+                   }
+                }
+            
+              }
+            }
+          }
+        
+        }
+   
+      }
+      ul{
+        width: 250px;
+        li{
+          .side{
+           padding: 15px 25px;
+           line-height: 17px;
+           font-size: 13px;
+           border-bottom: 1px solid #363636;
+           font-weight: 600;
+           .arrow-right{
+             font-size: 14px;
+             margin-left: 100px;
+           }
+          }
+        }
+
+      }
+
+
+    }
+  }
