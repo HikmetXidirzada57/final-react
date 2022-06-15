@@ -7,7 +7,7 @@ import Roll from "react-reveal/Roll";
 import Fade from "react-reveal/Fade";
 import LightSpeed from "react-reveal/LightSpeed";
 import Reveal from 'react-reveal/Reveal';
-import Slide from 'react-reveal/Slide';
+import Pulse from 'react-reveal/Pulse';
 
 import "./slider.scss";
 
@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { Flip } from "react-reveal";
 
 const SliderBig = () => {
   return (
@@ -30,9 +31,9 @@ const SliderBig = () => {
         
           <SwiperSlide>
             <div className="col-md-12 col-sm-12">
-            <Slide left>
+            <Pulse>
               <img className="img-fluid" src={imgBanner} alt="bannerImg" />
-             </Slide>
+             </Pulse>
              
               <div className="text-left">
                 <Roll>
@@ -51,7 +52,7 @@ const SliderBig = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <div className="col-md-12 col-sm-12">
             <Slide left>
               <img className="img-fluid" src={imgBannaer2} alt="bannerImg" />
@@ -73,7 +74,7 @@ const SliderBig = () => {
                
               </div>
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
     </div>

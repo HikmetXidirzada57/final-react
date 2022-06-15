@@ -2,26 +2,21 @@
     background-color: rgb(28,28,28);
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     .container-mini{
-        width: 95%;
+        width: 93%;
         margin: auto;
     }
+ 
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
     .footer-top{
-        // border-bottom: 1px;
-        padding: 66px 0 70px;
-        // position: relative;
-        // display: inline-block;
-        // vertical-align: top;
-        // width: 100%;
+        padding: 55px 0 70px;
+        text-align: left;
+        
         .first-widget{
-            // width: 24%;
-            // padding-right: 90px;
-            // // display: inline-block;
-            // vertical-align: top;
-            // box-sizing: border-box;
-            // min-height: 210px;
-            // position: relative;
-            // border-right: 0.5px solid white;
-            
+            width: 28%;
+            padding-right: 90px;
             h3{
                 border-bottom: 0px;
                 padding: 0 0 10px;
@@ -30,24 +25,123 @@
                 line-height: 24px;
                 font-weight: 600;
                 text-align: left;
-                margin-left: 40px;
+                margin-left: 10px;
+                letter-spacing: 1px;
+            }
+            p{
+                color: #ffff;
+                font-size: 12px;
+                line-height: 20px;
+                margin-left: 15px;
+                font-weight: 5600;
+                word-spacing: 1px;
+                padding: 0;
+                margin: 0;
+                margin-left: 5px;
+                padding: 0 0 10px;
             }
             .toggle-contact{
                 .adress,.phone,.email{
-                    margin-bottom: 20px;
+                    margin-bottom: 15px;
                     text-align: left;
-                    padding: 0 0 10px;
+                    .foot-icon{
+                     transition: 0.2s ease-in-out;
+                    }
+                    .foot-location{
+                        font-size: 30px;
+                    }
                     span{
                         color: #ffff;
                         font-size: 13px;
                         line-height: 26px;
                         margin-left: 15px;
                     }
+                    &:hover{
+                        .foot-icon,.foot-location{
+                            color: #E09654;
+                        }
+                    }
                 }
             }
         }
         .second-widget{
-
+            width: 15%;
+            padding-left: 90px;
+            border-left: 1px solid white;
+        }
+        .third-widget{
+            width: 17%;
+            padding-left: 90px;
+        }
+        .fourth-widget{
+            width: 23%;
+            padding-right: 90px;
+            padding-left: 90px;
+            border-right: 1px solid white;
+        }
+        .second-widget,.third-widget,.fourth-widget{
+            h3{
+                border-bottom: 0px;
+                padding: 0 0 15px;
+                color: #E09654;
+                font-size: 18px;
+                line-height: 15px;
+                font-weight: 500;
+            }
+        }
+        .second-widget,.third-widget,.fourth-widget, .toggle-block li a{
+            line-height: 35px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.2s ease-in;
+            &:hover{
+                color: #E09654;
+            }
+        }
+        .fifth-widget{
+            width: 28%;
+            padding-left: 90px;
+            text-align: left;
+            h3{
+                border-bottom: 0px;
+                padding: 0 0 10px;
+                color: #E09654;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 600;
+                text-align: left;
+                letter-spacing: 1px;
+            }
+            p{
+                color: #ffff;
+                margin-bottom: 0px;
+                padding: 0;
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+            .input-field{
+                position: relative;
+                input{
+                    line-height: 25px;
+                    border-right: 0px;
+                    padding: 6px 20px;
+                    border: none;
+                }
+                .submit-button{
+                    position: absolute;
+                    right: 25px;
+                    top: 0px;
+                    border: none;
+                    button{
+                        border: none;
+                        padding: 5px;
+                        background: transparent;
+                    }
+                }
+            }
+          
+            
         }
     }
    
