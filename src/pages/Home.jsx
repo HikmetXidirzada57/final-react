@@ -8,6 +8,7 @@ import Wrapper from '../components/entry-content/Wrapper'
 import Outer from '../components/owl-outer/Outer'
 import RecProducts from '../components/recommended/RecProducts'
 import SliderBig from '../components/slider-home/SliderBig'
+import Blog from '../components/blogs/Blog'
 import './home.scss'
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <RecProducts/>
       <Inner/>
       <Outer/>
+      <Blog/>
     </div>
   )
 }
