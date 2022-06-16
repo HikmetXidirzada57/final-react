@@ -6,7 +6,6 @@ const Set = () => {
   return (
  
        <div className="col-lg-6 col-md-6">
-        <div className="all-sets">
         <div className="coloumn-inner">
         <div className="wrapper">
           <div className="banner-img">
@@ -26,7 +25,6 @@ const Set = () => {
           </div>
         </div>
       </div>
-        </div>
     
     </div>
 

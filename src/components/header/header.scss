@@ -1,5 +1,8 @@
 *{
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  
+}
+
 
   .container-mini{
     width: 75%;
@@ -17,6 +20,7 @@
 //  HEADER CSS START ///////
 #mainHead{
   background-color: #100f0ff1;
+
   ul{
     list-style: none;
     li{
@@ -43,6 +47,10 @@
     padding: 25px 0px;
     border-bottom: 1px solid #363636;
     text-align: center;
+    &.active-top{
+      display: none;
+      // height: 0;
+    }
     .header-top-center{
       .form{
         input{
@@ -120,9 +128,20 @@
   // header top end -///@at-root
 
   .header-bottom{
+    transition: 0.5s ease-in-out;
+
+    &.active-header{
+      width: 100%;
+      position: fixed;
+      z-index: 999;
+      background-color: #100f0ff1;
+      .header-top{
+        display: none;
+      }
+     }
     .header-bottom-left{
       border-bottom: 1px solid #363636;
- 
+    
    .navigator-bar{
     transition: 0.4s ease-in-out;
     &.active-nav{
@@ -157,6 +176,12 @@
         z-index: 99;
         opacity: 0;
         transition: 0.4s ease-in;
+        a{
+          &:hover{
+             color: #e09654;
+          }
+        }
+     
       }
       .shopping,.blog,.feat,.media{
         position: relative;
@@ -183,6 +208,11 @@
           visibility: hidden;
           opacity: 0;
           transition: 0.4s ease-in;
+          a{
+            &:hover{
+               color: #e09654;
+            }
+          }
           .sub-title{
           background: #fff;
           line-height: 10px;
@@ -251,10 +281,10 @@
           // display: none;
           position: absolute;
           right: 0;
-          padding: 15px 20px;
+          padding: 10px 20px;
           z-index: 9;
           width: 150px;
-          text-align: left;
+          text-align: left; 
           top: 45px;
           left: auto;
           border: 1px solid #ebebeb;
@@ -263,6 +293,8 @@
               li{
                 margin: 0;
                 a{
+                  margin: 0;
+                  padding: 7px;
                   color: #000000;
                 }
               }
@@ -277,7 +309,7 @@
       right: 0;
       width: 100%;
       height: 100%;
-      z-index: 99999;
+      z-index: 9999;
       cursor: pointer;
       background: rgba(0,0,0,.6);
       display: none;
@@ -295,14 +327,12 @@
 
   }
   // HEADER END ///////
-}
 
 // RESPONSIVE START 
 @media screen and (max-width: 1400px) {
   *{
-   
     #mainHead{
-      // width: 1000px !important;
+      width: 100%!important;
        .container-mini{
         width: 90% !important;
        }
@@ -410,7 +440,6 @@
                 }
                 
                 .media{
-
                   width: 150px !important;
                  .drop-media{
                   display: none !important;
@@ -423,7 +452,9 @@
                      li{
                       a{
                         line-height: 20px !important;
+                   
                       }
+                      
                      }
                   }
                 

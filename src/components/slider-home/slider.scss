@@ -46,3 +46,12 @@
         width: 70px;
     }
 }
+@media screen and(max-width:1070px){
+.slider-range{
+    width: 100% !important;
+    .swiper{
+        width: 1000px !important;
+        
+    }
+}
+}

@@ -5,8 +5,8 @@ import bannaerimg from "../../images/Sub-banner-01.jpg";
 const SingleContent = () => {
   return (
     
-    <div className="col-lg-6 col-md-6">
-        <div className="all-wrapper">
+    <div className="col-lg-6 col-md-12 col-sm-12">
+   
         <div className="coloumn-inner">
         <div className="wrapper">
           <div className="banner-img">
@@ -26,7 +26,6 @@ const SingleContent = () => {
           </div>
         </div>
       </div>
-        </div>
     
     </div>
     

@@ -5,11 +5,13 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 import NearMeIcon from '@mui/icons-material/NearMe';
 import { Link } from "react-router-dom";
+import paymenyImg from '../../images/images.jpg'
 
 const Footer = () => {
   return (
+    // FOOTER START /////
     <footer className="footer">
-      <div className="container-mini">`
+      <div className="container-mini">
         <div className="footer-top">
           <div className="footer-widget-area">
             <div className="d-flex justify-content-between">
@@ -106,9 +108,18 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="footer-bottom"></div>
+        <div className="footer-bottom">
+          <div className="top-payment-methods">
+             <p>Copyright © 2022 Templatemela</p>
+            <span className="method-payment">
+              <img src={paymenyImg} alt="payment" />
+            </span>
+          </div>
+        </div>
       </div>
     </footer>
+
+    // FOOTER END ///
   );
 };
 

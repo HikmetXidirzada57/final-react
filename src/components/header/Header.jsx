@@ -14,22 +14,29 @@ import Categoryes from "../categoryList/Categoryes";
 const Header = () => {
   const [isActive, seteActive] = useState("true")
   const [click, setClick] = useState("")
+  const [headTop, setHeadTop] = useState("");
+  const [headBut, setHeadBut] = useState("");
 
   const handleToggle=()=>{
      seteActive(!isActive)
   }
-  
-  
-  
    window.addEventListener("click",function(){
       setClick("active-nav")
   
    })
-
+   window.addEventListener("scroll", function () {
+     if (window.scrollY > 0) {
+      setHeadTop("active-header");
+      setHeadBut("active-top")
+     } else {
+      setHeadTop("");
+      setHeadBut("")
+     }
+   });
   return (
     //   header start/////
     <header id="mainHead">
-      <div className="header-top">
+      <div className={`header-top ${headBut}`}>
         <div className="container-mini">
           <div className="md d-flex  justify-content-between sm justify-content-center align-items-center">
             <div className="header-top-left col-auto">
@@ -40,7 +47,7 @@ const Header = () => {
             <div className="header-top-center">
               <div className="form">
                 <form action="" className="d-flex">
-                  <input type="text" placeholder="Search item" />
+                  <input type="text" placeholder="Search item"/>
                   <button className="search-button over-button">Search</button>
                 </form>
               </div>
@@ -51,7 +58,7 @@ const Header = () => {
                   <div className="sms-block">
                     <div className="d-flex align-items-center">
                       <div className="s-icon">
-                        <LocalShippingOutlinedIcon className="shipping hover" />
+                        <LocalShippingOutlinedIcon className="shipping hover"/>
                       </div>
                       <div className="s-text">
                         Free <br />
@@ -62,10 +69,10 @@ const Header = () => {
                   <div className="contact-block">
                     <div className="d-flex align-items-center">
                       <div className="c-icon">
-                        <HeadsetMicOutlinedIcon className="headphone hover" />
+                        <HeadsetMicOutlinedIcon className="headphone hover"/>
                       </div>
                       <div className="c-text">
-                        Contact <br />
+                         Contact <br />
                         <span>0554770076</span>
                       </div>
                     </div>
@@ -76,7 +83,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="header-bottom">
+      <div className={`header-bottom ${headTop}`}>
         <div className="container-theme">
           <div className=" md d-flex justify-content-between  align-items-center md flex-wrap">
             <div className="header-bottom-left">

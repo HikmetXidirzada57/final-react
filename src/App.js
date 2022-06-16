@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import MyRoutes from './components/config/MyRoutes';
+import MyRoutes from './config/MyRoutes'
 
 function App() {
   return (

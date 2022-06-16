@@ -10,12 +10,13 @@
         text-decoration: none;
         color: #fff;
     }
+    // footer top start /////
     .footer-top{
         padding: 55px 0 70px;
         text-align: left;
         
         .first-widget{
-            width: 28%;
+            width: 23%;
             padding-right: 90px;
             h3{
                 border-bottom: 0px;
@@ -67,17 +68,17 @@
         .second-widget{
             width: 15%;
             padding-left: 90px;
-            border-left: 1px solid white;
+            border-left: 1px solid #363636;
         }
         .third-widget{
-            width: 17%;
+            width: 15%;
             padding-left: 90px;
         }
         .fourth-widget{
             width: 23%;
             padding-right: 90px;
             padding-left: 90px;
-            border-right: 1px solid white;
+            border-right: 1px solid #363636;
         }
         .second-widget,.third-widget,.fourth-widget{
             h3{
@@ -100,7 +101,7 @@
             }
         }
         .fifth-widget{
-            width: 28%;
+            width: 23%;
             padding-left: 90px;
             text-align: left;
             h3{
@@ -130,7 +131,7 @@
                 }
                 .submit-button{
                     position: absolute;
-                    right: 25px;
+                    right: 0px;
                     top: 0px;
                     border: none;
                     button{
@@ -144,5 +145,128 @@
             
         }
     }
-   
+//    footer top end  ///////
+
+
+//   footer bottom statr 
+.footer-bottom{
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    border-top: 1px solid #363636;
+    padding: 20px 0 23px;
+    text-align: center;
+    .top-payment-methods{
+        .method-payment{
+            img{
+                height: 30px;
+            }
+        }
+        p{
+            color: #EBEBEB;
+            font-size: 13px;
+            font-weight: 600;
+        }
+    }
+
 }
+// footer bottom end/////
+
+
+
+
+// RESPONSIVE STRAT ////
+
+
+}
+@media screen and(max-width:1380px){
+    .footer{
+        width: 100% !important;
+        .footer-top{
+            .footer-widget-area{
+                .second-widget,.third-widget,.fourth-widget{
+                    h3{
+                        // font-size: 13px;
+                    }
+                    a{
+                        font-size: 10px !important;
+                    }
+                }
+            }
+        
+        }
+    
+    }
+ }
+ @media screen and(max-width:1200px){
+    .footer{
+        width: 100% !important;
+        .container-mini{
+            width: 100% !important;
+        }
+        .footer-top{
+            .footer-widget-area{
+                .second-widget,.third-widget,.fourth-widget{
+                    width: 20% !important;
+                    padding: 20px !important;
+                    h3{
+                        // font-size: 13px;
+                    }
+                    a{
+                        font-size: 10px !important;
+                    }
+                }
+                .first-widget{
+                    width: 30% !important;
+                    padding: 20px !important;
+                }
+                .fifth-widget{
+                    padding: 20px !important;
+                    .input-field{
+                        position: relative;
+                        input{
+                            padding: 5px 15px !important;
+                        }
+                        .submit-button{
+                            position: absolute;
+                            right: -10px !important;
+                        }
+                    }
+                }
+            }
+        
+        }
+    
+    }
+ } @media screen and(max-width:1000px){
+    .footer{
+   
+        .footer-top{
+                .fifth-widget{
+                    .input-field{
+                        position: relative;
+                        .submit-button{
+                            position: absolute;
+                            right: -20px !important;
+                        }
+                    }
+                }
+                .second-widget,.fourth-widget,.third-widget{
+                    border: none !important;
+                    h3{
+                        
+                    }
+                }
+                .toggle-contact,.toggle-block,.toggle-input,p{
+                    display: none;
+                    .title-contact,.title{
+                        h3{
+                            font-size: 15px !important;
+                        }
+                    }
+              
+                }
+            }
+        
+        }
+ }
