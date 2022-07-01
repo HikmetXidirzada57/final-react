@@ -5,8 +5,8 @@ import "./inner.scss";
 const Inner = () => {
   return (
     <div className="col-lg-12">
-      <div className="inner">
-        <div className="contain">
+      <div className="background-components">
+        <div className="container-mini">
           <div className="row">
             <Set />
             <Set />

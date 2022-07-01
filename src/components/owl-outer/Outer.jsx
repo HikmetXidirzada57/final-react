@@ -11,7 +11,8 @@ import "swiper/css/scrollbar";
 const Outer = () => {
   return (
     <div className='outer-brand'>
-        <div className="container">
+      <div className="background-components">
+      <div className="container-mini">
             <Swiper 
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
@@ -41,6 +42,8 @@ const Outer = () => {
                 </SwiperSlide>
             </Swiper>
         </div>
+      </div>
+  
     </div>
   )
 }

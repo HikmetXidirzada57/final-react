@@ -1,17 +1,8 @@
 .deal-item{
     background-color: #fff;
-    padding: 10px;
-    margin-top: 30px;
-    position: relative;
-    margin-left: 25px;
-    
-    .container-mini{
-      width: 100%;
-      margin: auto;
-    }
+
     .feature-image{
       position: relative;
-
       .on-sale{
         margin: 0;
         position: absolute;
@@ -31,6 +22,7 @@
     .product-detail{
       display: inline-block;
       padding: 30px;
+      width: 50%;
       text-align: left;
       .rating{
         margin-top: 10px;
@@ -147,4 +139,39 @@
         opacity: 1;
       }
     }
+}
+@media screen and(max-width:992px) {
+  .deal-item{
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and(max-width:535px) {
+  .deal-item{
+     flex-wrap: wrap;
+    margin-bottom: 15px;
+    .feature-image{
+      margin-left: 5px;
+    }
+  }
+}
+@media screen and(min-width:992px) and (max-width:1289px) {
+  .deal-item{
+    .feature-image{
+      width: 100%;
+    }
+    .product-detail{
+      width: 100%;
+    }
+  }
+}
+@media screen and(max-width:632px) {
+  .deal-item{
+    .feature-image{
+      width: 100%;
+    }
+    .product-detail{
+      width: 100%;
+    }
+  }
 }

@@ -1,0 +1,82 @@
+.slider-range {
+  position: relative;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.slider-range .text-left {
+  position: absolute;
+  z-index: 99;
+  top: 25%;
+  left: 13%;
+  text-align: left;
+}
+
+.slider-range .text-left p {
+  color: #e09654;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.slider-range .text-left h2 {
+  color: #fff;
+  font-size: 33px;
+  font-weight: 600;
+  word-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.slider-range .text-left h6 {
+  color: rgba(255, 255, 255, 0.815);
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 23px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.slider-range .text-left button {
+  background-color: #e09654;
+  color: #fff;
+  padding: 8px 19px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.slider-range .swiper-button-next, .slider-range .swiper-button-prev {
+  color: #fff;
+  font-weight: 600;
+  margin-left: 15px;
+  width: 70px;
+}
+
+.slider-range .swiper-container {
+  width: 480px;
+}
+
+.slider-range .top-up {
+  z-index: 999;
+  position: fixed;
+  right: 10px;
+  top: 90%;
+  background-color: #e09654;
+}
+
+.slider-range .top-up .arrow-up {
+  font-size: 40px;
+  color: #fff;
+}
+
+@media sreen and (max-width: 800px) {
+  .slider-range {
+    position: relative  !important;
+  }
+  .slider-range .text-left {
+    position: absolute;
+    top: 10%;
+    background-color: rebeccapurple;
+    z-index: 999;
+  }
+}
+/*# sourceMappingURL=slider.css.map */

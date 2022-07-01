@@ -1,0 +1,319 @@
+.footer {
+  background-color: #1c1c1c;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.footer .container-mini-footer {
+  width: 93%;
+  margin: auto;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer .footer-top {
+  padding: 55px 0 70px;
+  text-align: left;
+}
+
+.footer .footer-top .first-widget .div ul {
+  list-style: none;
+}
+
+.footer .footer-top .first-widget .div h3 {
+  border-bottom: 0px;
+  padding: 0 0 10px;
+  color: #E09654;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 10px;
+  letter-spacing: 1px;
+}
+
+.footer .footer-top .first-widget .div p {
+  color: #ffff;
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 15px;
+  font-weight: 5600;
+  word-spacing: 1px;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+  padding: 0 0 10px;
+}
+
+.footer .footer-top .first-widget .div ul {
+  list-style: none;
+}
+
+.footer .footer-top .first-widget .div ul .adress, .footer .footer-top .first-widget .div ul .phone, .footer .footer-top .first-widget .div ul .email {
+  margin-bottom: 15px;
+  text-align: left;
+  color: #fff;
+}
+
+.footer .footer-top .first-widget .div ul .adress .foot-icon, .footer .footer-top .first-widget .div ul .phone .foot-icon, .footer .footer-top .first-widget .div ul .email .foot-icon {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  color: #fff;
+}
+
+.footer .footer-top .first-widget .div ul .adress .foot-location, .footer .footer-top .first-widget .div ul .phone .foot-location, .footer .footer-top .first-widget .div ul .email .foot-location {
+  font-size: 30px;
+  color: #fff;
+}
+
+.footer .footer-top .first-widget .div ul .adress span, .footer .footer-top .first-widget .div ul .phone span, .footer .footer-top .first-widget .div ul .email span {
+  color: #ffff !important;
+  font-size: 13px;
+  line-height: 26px;
+  margin-left: 15px;
+}
+
+.footer .footer-top .first-widget .div ul .adress:hover .foot-icon, .footer .footer-top .first-widget .div ul .adress:hover .foot-location, .footer .footer-top .first-widget .div ul .phone:hover .foot-icon, .footer .footer-top .first-widget .div ul .phone:hover .foot-location, .footer .footer-top .first-widget .div ul .email:hover .foot-icon, .footer .footer-top .first-widget .div ul .email:hover .foot-location {
+  color: #E09654;
+}
+
+.footer .footer-top .second-widget {
+  padding-left: 30px;
+  border-left: 1px solid #363636;
+}
+
+.footer .footer-top .third-widget {
+  padding-left: 30px;
+}
+
+.footer .footer-top .fourth-widget {
+  padding-left: 30px;
+  border-right: 1px solid #363636;
+}
+
+.footer .footer-top .second-widget h3, .footer .footer-top .third-widget h3, .footer .footer-top .fourth-widget h3 {
+  border-bottom: 0px;
+  padding: 0 0 15px;
+  color: #E09654;
+  font-size: 18px;
+  line-height: 15px;
+  font-weight: 500;
+  margin-left: 28px;
+}
+
+.footer .footer-top .second-widget, .footer .footer-top .third-widget, .footer .footer-top .fourth-widget, .footer .footer-top ul li a {
+  line-height: 35px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.footer .footer-top .second-widget:hover, .footer .footer-top .third-widget:hover, .footer .footer-top .fourth-widget:hover, .footer .footer-top ul li a:hover {
+  color: #E09654;
+}
+
+.footer .footer-top .second-widget ul, .footer .footer-top .third-widget ul, .footer .footer-top .fourth-widget ul, .footer .footer-top ul li a ul {
+  list-style: none;
+}
+
+.footer .footer-top .fifth-widget {
+  text-align: left;
+}
+
+.footer .footer-top .fifth-widget h3 {
+  border-bottom: 0px;
+  padding: 0 0 10px;
+  color: #E09654;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.footer .footer-top .fifth-widget p {
+  color: #ffff;
+  margin-bottom: 0px;
+  padding: 0;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.footer .footer-top .fifth-widget div {
+  position: relative;
+}
+
+.footer .footer-top .fifth-widget div input {
+  line-height: 25px;
+  border-right: 0px;
+  padding: 6px 20px;
+  border: none;
+}
+
+.footer .footer-top .fifth-widget div .submit-button {
+  position: absolute;
+  right: 28%;
+  top: 0px;
+  border: none;
+}
+
+.footer .footer-top .fifth-widget div .submit-button button {
+  border: none;
+  padding: 5px;
+  background: transparent;
+}
+
+.footer .footer-bottom {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  border-top: 1px solid #363636;
+  padding: 20px 0 23px;
+  text-align: center;
+}
+
+.footer .footer-bottom .top-payment-methods .method-payment img {
+  height: 30px;
+}
+
+.footer .footer-bottom .top-payment-methods p {
+  color: #EBEBEB;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1390px) {
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget {
+    padding-left: 60px;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget div form div .submit-button {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .footer .container-mini-footer .footer-top .footer-widget-area .second-widget, .footer .container-mini-footer .footer-top .footer-widget-area .third-widget, .footer .container-mini-footer .footer-top .footer-widget-area .fourth-widget {
+    padding-left: 10px;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .second-widget h3, .footer .container-mini-footer .footer-top .footer-widget-area .third-widget h3, .footer .container-mini-footer .footer-top .footer-widget-area .fourth-widget h3 {
+    margin-left: 25px;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget {
+    padding-left: 10px;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget div form div .submit-button {
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget {
+    padding-left: 10px;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget div form div .submit-button {
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget {
+    padding-left: 10px;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget div form div .submit-button {
+    right: 3%;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget {
+    padding-left: 10px;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget div form div .submit-button {
+    right: -1%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget {
+    padding-left: 10px;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget .toggle-input form .input-field .submit-button {
+    right: -3%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer .container-mini-footer .footer-top .footer-widget-area .first-widget {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 0px;
+    color: #fff;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .first-widget .title-contact h3 {
+    margin-left: 10px;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .first-widget .footer-click {
+    display: block !important;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .first-widget .toggle-contact {
+    display: none;
+    text-align: left;
+    list-style: none;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .second-widget, .footer .container-mini-footer .footer-top .footer-widget-area .third-widget, .footer .container-mini-footer .footer-top .footer-widget-area .fourth-widget {
+    padding-left: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .second-widget .title, .footer .container-mini-footer .footer-top .footer-widget-area .third-widget .title, .footer .container-mini-footer .footer-top .footer-widget-area .fourth-widget .title {
+    text-align: left;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .second-widget .title h3, .footer .container-mini-footer .footer-top .footer-widget-area .third-widget .title h3, .footer .container-mini-footer .footer-top .footer-widget-area .fourth-widget .title h3 {
+    margin-left: 10px;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .second-widget .footer-click, .footer .container-mini-footer .footer-top .footer-widget-area .third-widget .footer-click, .footer .container-mini-footer .footer-top .footer-widget-area .fourth-widget .footer-click {
+    display: block !important;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .second-widget .toggle-block, .footer .container-mini-footer .footer-top .footer-widget-area .third-widget .toggle-block, .footer .container-mini-footer .footer-top .footer-widget-area .fourth-widget .toggle-block {
+    display: none;
+    list-style: none;
+    text-align: left;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget {
+    padding-left: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget .footer-click {
+    display: block !important;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget .toggle-input form .input-field {
+    display: none;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget .toggle-input form .input-field input {
+    text-align: left;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget .toggle-input form .input-field .submit-button {
+    right: 0%;
+  }
+  .footer .container-mini-footer .footer-top .footer-widget-area .fifth-widget p {
+    display: none;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

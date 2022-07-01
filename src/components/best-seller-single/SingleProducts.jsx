@@ -4,22 +4,18 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import CompareIcon from "@mui/icons-material/Compare";
-import singleImage from "../../images/2-1-256x360.jpg";
 
 // import Rating from "@mui/material/Rating";
 
 import "./singleproduct.scss";
 import { Rating } from "@mui/material";
 
-const SingleProducts = () => {
-
+const SingleProducts = ({data}) => {
   return (
-    <div>
-      <div className="col-md-12">
-        <div className="container">
+      
         <div className="owl-item">
           <Link to="#">
-            <img className="img-fluid" src={singleImage} alt="" />
+            <img className="img-fluid" src={data} alt="" />
           </Link>
           <div className="block-hover">
             <div className="shopping-cart">
@@ -48,10 +44,7 @@ const SingleProducts = () => {
             <span className="price">$150</span>
           </div>
         </div>
-        </div>
       
-      </div>
-    </div>
   );
 };
 

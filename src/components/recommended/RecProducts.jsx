@@ -1,14 +1,16 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import SingleRec from '../singleRecommend/SingleRec';
 import './recommend.scss'
+import SingleProducts from '../best-seller-single/SingleProducts';
+import recImage from "../../images/1-303x196_t.jpg";
+
 const RecProducts = () => {
   return (
-    <div className="rec">
+    <div className="background-components">
     <div className="col-lg-12">
-      <div className="containe">
-          <div className="shortcode-title">
+      <div className="container-mini">
+          <div className="page-title">
           <h1>Recommended Products</h1>
         </div>
         <Swiper
@@ -18,22 +20,27 @@ const RecProducts = () => {
           navigation
         >
           <SwiperSlide>
-            <SingleRec/>
+            <SingleProducts data={recImage}/>
           </SwiperSlide>
           <SwiperSlide>
-            <SingleRec/>
+          <SingleProducts  data={recImage}/>
+
           </SwiperSlide>
           <SwiperSlide>
-            <SingleRec/>
+          <SingleProducts data={recImage}/>
+
           </SwiperSlide>
           <SwiperSlide>
-            <SingleRec/>
+          <SingleProducts data={recImage}/>
+
           </SwiperSlide>
           <SwiperSlide>
-            <SingleRec/>
+          <SingleProducts data={recImage}/>
+
           </SwiperSlide>
           <SwiperSlide>
-            <SingleRec/>
+          <SingleProducts data={recImage}/>
+
           </SwiperSlide>
         </Swiper>
       </div>

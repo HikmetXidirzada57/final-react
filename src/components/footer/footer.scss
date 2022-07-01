@@ -1,7 +1,7 @@
 .footer{
     background-color: rgb(28,28,28);
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    .container-mini{
+    .container-mini-footer{
         width: 93%;
         margin: auto;
     }
@@ -16,68 +16,74 @@
         text-align: left;
         
         .first-widget{
-            width: 23%;
-            padding-right: 90px;
-            h3{
-                border-bottom: 0px;
-                padding: 0 0 10px;
-                color: #E09654;
-                font-size: 16px;
-                line-height: 24px;
-                font-weight: 600;
-                text-align: left;
-                margin-left: 10px;
-                letter-spacing: 1px;
-            }
-            p{
-                color: #ffff;
-                font-size: 12px;
-                line-height: 20px;
-                margin-left: 15px;
-                font-weight: 5600;
-                word-spacing: 1px;
-                padding: 0;
-                margin: 0;
-                margin-left: 5px;
-                padding: 0 0 10px;
-            }
-            .toggle-contact{
-                .adress,.phone,.email{
-                    margin-bottom: 15px;
+            .div{
+                ul{
+                    list-style: none;
+                }
+                h3{
+                    border-bottom: 0px;
+                    padding: 0 0 10px;
+                    color: #E09654;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 600;
                     text-align: left;
-                    .foot-icon{
-                     transition: 0.2s ease-in-out;
-                    }
-                    .foot-location{
-                        font-size: 30px;
-                    }
-                    span{
-                        color: #ffff;
-                        font-size: 13px;
-                        line-height: 26px;
-                        margin-left: 15px;
-                    }
-                    &:hover{
-                        .foot-icon,.foot-location{
-                            color: #E09654;
+                    margin-left: 10px;
+                    letter-spacing: 1px;
+                }
+                p{
+                    color: #ffff;
+                    font-size: 12px;
+                    line-height: 20px;
+                    margin-left: 15px;
+                    font-weight: 5600;
+                    word-spacing: 1px;
+                    padding: 0;
+                    margin: 0;
+                    margin-left: 5px;
+                    padding: 0 0 10px;
+                }
+                ul{
+                    list-style: none;
+                     
+                    .adress,.phone,.email{
+                        margin-bottom: 15px;
+                        text-align: left;
+                        color: #fff;
+                        .foot-icon{
+                         transition: 0.2s ease-in-out;
+                         color: #fff;
+                        }
+                        .foot-location{
+                            font-size: 30px;
+                            color: #fff;
+                        }
+                        span{
+                            color: #ffff !important;
+                            font-size: 13px;
+                            line-height: 26px;
+                            margin-left: 15px;
+                        }
+                        &:hover{
+                            .foot-icon,.foot-location{
+                                color: #E09654;
+                            }
                         }
                     }
                 }
             }
+    
         }
         .second-widget{
-            width: 15%;
-            padding-left: 90px;
+            padding-left: 30px;
             border-left: 1px solid #363636;
+         
         }
         .third-widget{
-            width: 15%;
-            padding-left: 90px;
+            padding-left: 30px;
         }
         .fourth-widget{
-            width: 23%;
-            padding-right: 90px;
-            padding-left: 90px;
+            padding-left: 30px;
             border-right: 1px solid #363636;
         }
         .second-widget,.third-widget,.fourth-widget{
@@ -88,9 +94,10 @@
                 font-size: 18px;
                 line-height: 15px;
                 font-weight: 500;
+                margin-left:28px;
             }
         }
-        .second-widget,.third-widget,.fourth-widget, .toggle-block li a{
+        .second-widget,.third-widget,.fourth-widget, ul li a{
             line-height: 35px;
             color: #fff;
             font-size: 13px;
@@ -99,11 +106,13 @@
             &:hover{
                 color: #E09654;
             }
+            ul{
+                list-style: none;
+            }
         }
         .fifth-widget{
-            width: 23%;
-            padding-left: 90px;
             text-align: left;
+        
             h3{
                 border-bottom: 0px;
                 padding: 0 0 10px;
@@ -121,7 +130,7 @@
                 font-size: 13px;
                 margin-bottom: 15px;
             }
-            .input-field{
+            div{
                 position: relative;
                 input{
                     line-height: 25px;
@@ -131,7 +140,7 @@
                 }
                 .submit-button{
                     position: absolute;
-                    right: 0px;
+                    right: 28%;
                     top: 0px;
                     border: none;
                     button{
@@ -173,100 +182,257 @@
 // footer bottom end/////
 
 
-
+}
 
 // RESPONSIVE STRAT ////
 
-
-}
-@media screen and(max-width:1380px){
+@media screen and(max-width:1390px){
     .footer{
-        width: 100% !important;
-        .footer-top{
-            .footer-widget-area{
-                .second-widget,.third-widget,.fourth-widget{
-                    h3{
-                        // font-size: 13px;
-                    }
-                    a{
-                        font-size: 10px !important;
+        .container-mini-footer{
+            .footer-top{
+          
+                .footer-widget-area{
+                  
+                    .fifth-widget{
+                        padding-left: 60px;
+                         div{
+                            form{
+
+                                div{
+                                    .submit-button{
+                                       right: 5%;
+                                    }
+                                }
+                        }
+                         }
+                          
+                      
                     }
                 }
-            }
-        
+            
+            }  
         }
+       
+    
+    }
+ }
+ 
+
+ @media screen and(max-width:1330px){
+    .footer{
+        .container-mini-footer{
+            .footer-top{
+          
+                .footer-widget-area{
+                    .second-widget,.third-widget,.fourth-widget{
+                        padding-left: 10px;
+                        h3{
+                            margin-left: 25px;
+                        }
+                    }
+                    .fifth-widget{
+                        padding-left: 10px;
+                        div{
+                            form{
+                                div{
+                                   .submit-button{
+                                        right: 10%; 
+                                    }
+                                   }
+                              }
+                        }
+                            
+                      
+                    }
+                }
+            
+            }  
+        }
+       
+    
+    }
+ }
+ @media screen and(max-width:1300px){
+    .footer{
+        .container-mini-footer{
+            .footer-top{
+          
+                .footer-widget-area{
+                    .fifth-widget{
+                        padding-left: 10px;
+                        div{
+                            form{
+                                div{
+                                    .submit-button{
+                                       right: 10%;
+                                    }
+                                }
+                            }
+                        }
+                      
+                    }
+                }
+            
+            }  
+        }
+       
     
     }
  }
  @media screen and(max-width:1200px){
     .footer{
-        width: 100% !important;
-        .container-mini{
-            width: 100% !important;
-        }
-        .footer-top{
-            .footer-widget-area{
-                .second-widget,.third-widget,.fourth-widget{
-                    width: 20% !important;
-                    padding: 20px !important;
-                    h3{
-                        // font-size: 13px;
-                    }
-                    a{
-                        font-size: 10px !important;
-                    }
-                }
-                .first-widget{
-                    width: 30% !important;
-                    padding: 20px !important;
-                }
-                .fifth-widget{
-                    padding: 20px !important;
-                    .input-field{
-                        position: relative;
-                        input{
-                            padding: 5px 15px !important;
+        .container-mini-footer{
+            .footer-top{
+                .footer-widget-area{
+                    .fifth-widget{
+                        padding-left: 10px;
+                        div{
+                            form{
+                                div{
+                                    .submit-button{
+                                       right: 3%;
+                                    }
+                                }
+                            }
                         }
-                        .submit-button{
-                            position: absolute;
-                            right: -10px !important;
-                        }
+                      
                     }
                 }
-            }
-        
+            
+            }  
         }
+    }
+ }
+ @media screen and(max-width:1170px){
+    .footer{
+        .container-mini-footer{
+            .footer-top{
+                .footer-widget-area{
+                    .fifth-widget{
+                        padding-left: 10px;
+                        div{
+                            form{
+                                div{
+                                  .submit-button{
+                                      right: -1%;
+                                    }
+                                }
+                               
+                          }
+                        }
+                         
+                      
+                    }
+                }
+            
+            }  
+        }
+    }
+ }
+ @media screen and(max-width:1100px){
+    .footer{
+        .container-mini-footer{
+            .footer-top{
+                .footer-widget-area{
+                    .fifth-widget{
+                        padding-left: 10px;
+                        .toggle-input{
+                            form{
+                                .input-field{
+                                    .submit-button{
+                                       right: -3%;
+                                    }
+                                }
+                            }
+                        }
+                      
+                    }
+                }
+            
+            }  
+        }
+    }
+ }
+ @media screen and(max-width:992px){
+    .footer{
+        .container-mini-footer{
+            .footer-top{
+                .footer-widget-area{
+                    .first-widget{
+                        display: flex;
+                        justify-content: space-between;
+                        padding-left: 0px;
+                        color: #fff;
+                        .title-contact{
+                            h3{
+                                margin-left: 10px;
+                            }
+                        }
+                        .footer-click{
+                            display: block !important;
+                        }
+                        .toggle-contact{
+                            display: none;
+                            text-align: left;
+                            list-style: none;
+                        }
+                    }
+                    .second-widget,.third-widget,.fourth-widget{
+                        padding-left: 0px;
+                        display: flex;
+                        justify-content: space-between;
+                        .title{
+                            text-align: left;
+                            h3{
+                                margin-left: 10px;
+                            }
+                        }
+                        .footer-click{
+                            display: block !important;
+                        }
+                        .toggle-block{
+                            display: none;
+                            list-style: none;
+                            text-align: left;
+                        }
+                    }
+                    .fifth-widget{
+                        padding-left: 7px;
+                        display: flex;
+                        justify-content: space-between;
+                        .title{
+                            h3{
+
+                            }
+                        }
+                        .footer-click{
+                            display: block !important;
+                        }
+                        .toggle-input{  
+                            form{
+                                .input-field{
+                                    input{
+                                        text-align: left;
+                                    }
+                                    .submit-button{
+                                        right: 0%;
+                                    }
+                                    display: none;
+                                }
+                            }
+                        }
+                        
+                      p{
+                        display: none;
+                      }
+                    }
+                }
+            
+            }  
+        }
+       
     
     }
- } @media screen and(max-width:1000px){
-    .footer{
-   
-        .footer-top{
-                .fifth-widget{
-                    .input-field{
-                        position: relative;
-                        .submit-button{
-                            position: absolute;
-                            right: -20px !important;
-                        }
-                    }
-                }
-                .second-widget,.fourth-widget,.third-widget{
-                    border: none !important;
-                    h3{
-                        
-                    }
-                }
-                .toggle-contact,.toggle-block,.toggle-input,p{
-                    display: none;
-                    .title-contact,.title{
-                        h3{
-                            font-size: 15px !important;
-                        }
-                    }
-              
-                }
-            }
-        
-        }
  }
+
+

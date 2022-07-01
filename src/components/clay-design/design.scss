@@ -1,39 +1,159 @@
 .wpg-design{
     position: relative;
-    padding-top: 30px;
-  background-color: #82828223;
+    padding: 30px 0px;
+    background-color: #82828223;
+    display: block;
+    overflow: hidden;
+       &::before{
+         content: "";
+           bottom: 0;
+           left: 50%;
+           opacity: 1;
+           position: absolute;
+           right: 51%;
+           top: 0;
+           background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+       }
+       &::after{
+        content: "";
+        bottom: 50%;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+       }
+    //    &:hover{
+    //     &::before{
+    //         left: 0;
+    //         right:0;
+    //         top: 100%;
+    //     }
+    //    }
 
 img{
     vertical-align: middle;
+    object-fit: cover;
+}
+  
+    
+       .static-wpg{
+        position: absolute;
+        top: 33%;
+        left:14%;
+       text-align: left;
+        .blow{
+         display: block;
+         padding-bottom: 14px;
+         font-size: 28px;
+         line-height: 32px;
+         color: #fff;
+        }
+        .textmini{
+            display: block;
+            padding-bottom: 50px;
+            font-size: 15px;
+            line-height: 22px;
+            color: #bebebe;
+        }
+        .shopButton{
+            padding: 11px 25px;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #e09654;
+        }
+    
+        }
+  
+
 }
 
-.static-wpg{
-    position: absolute;
-    top: 33%;
-    left:14%;
-   text-align: left;
-    .blow{
-     display: block;
-     padding-bottom: 14px;
-     font-size: 28px;
-     line-height: 32px;
-     color: #fff;
+@media screen and (max-width:1100px){
+    .wpg-design{
+        .static-wpg{
+            top: 28%;
+            left: 11%;
+            .blow{
+                padding-bottom: 8px;
+            }
+            .textmini{
+                padding-bottom: 30px;
+            }
+        }
     }
-    .textmini{
-        display: block;
-        padding-bottom: 50px;
-        font-size: 15px;
-        line-height: 22px;
-        color: #bebebe;
+}
+@media screen and (max-width:800px){
+    .wpg-design{
+        .static-wpg{
+            top: 28%;
+            left: 11%;
+            .blow{
+                padding-bottom: 8px;
+                font-size: 20px;
+            }
+            .textmini{
+                padding-bottom: 20px;
+                font-size: 13px;
+            }
+            .shopButton{
+                padding: 8px 15px;
+            }
+        }
     }
-    .shopButton{
-        padding: 11px 25px;
-        font-size: 14px;
-        letter-spacing: 0.2px;
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #e09654;
-    }
+}
+@media screen and (max-width:680px){
+    .wpg-design{
+        height: auto;
 
+        .container-mini{
+            width: 90%;
+        }
+        .static-wpg{
+            top: 20%;
+            left: 10%;
+            .blow{
+                padding-bottom: 5px;
+                font-size: 16px;
+            }
+            .textmini{
+                padding-bottom: 10px;
+                font-size: 11px;
+            }
+            .shopButton{
+                padding: 3px 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px){
+    .wpg-design{
+        height: auto;
+  
+        .container-mini{
+            width: 90%;
+        }  
+          
+            .static-wpg{
+                top: 17%;
+                left: 10%;
+                .blow{
+                    padding-bottom: 0px;
+                    font-size: 12px;
+                    margin: 0;
+                }
+                .textmini{
+                    padding-bottom: 0px;
+                    font-size: 8px;
+                }
+                .shopButton{
+                    padding: 3px 5px;
+                    font-size: 8px;
+                }
+            }
+      
     }
 }

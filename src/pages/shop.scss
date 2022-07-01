@@ -1,0 +1,150 @@
+#shop-area{
+    background-color: #82828227;
+    padding: 45px 50px;
+    .page-title{
+    display: inline-block;
+    padding: 0 0 20px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    h3{
+     line-height: 25px;
+     color: #000;
+     margin-bottom: 20px;
+     font-size: 25px;
+     font-weight: 600;
+     padding: 0px;
+     text-align: left;
+    }
+    p{
+    text-align: left ;  
+     color: #828282;
+     font-size: 14px;
+     line-height: 25px;
+    }
+    }
+    .filter-by-price{
+      background-color: #fff;
+      padding: 20px 40px;
+      text-align: left;
+      h3{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 25px;
+        position: relative;
+        color: #000;
+        &::after{
+          content: '';
+          position: absolute;
+          background-color: #000;
+          height: 2px;
+          bottom: -8px;
+          width: 20%;
+          left: 0;
+        }
+      }
+      .btn{
+        padding: 4px 20px;
+      }
+    }
+    .product-tags{
+      background-color: #fff;
+      padding: 20px 40px;
+      text-align: left;
+      .title-outer{
+        h3{
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 25px;
+          position: relative;
+          &::after{
+            content: '';
+            position: absolute;
+            background-color: #000;
+            height: 2px;
+            bottom: -8px;
+            width: 20%;
+            left: 0;
+          }
+        }
+      }
+      .tag-cloud{
+        background-color: #fff;
+        a{
+          display: inline-block;
+          padding: 4px 10px;
+          font-size: 13px ;
+          border: 1px solid #dcdcdc;
+          margin: 4px 2px;
+          text-decoration: none;
+          color: #000;
+        }
+      }
+    }
+    .wcommerce-pagination{
+      margin: 40px 0px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+     
+      .page{
+        color: #000;
+        border: 1px solid #e09654;
+        margin-left: 10px;
+        line-height: 28px;
+        padding:7px 10px; 
+        width: 30px;
+        font-size: 13px;
+        cursor: pointer;
+        .arrow-right{
+          font-size: 15px;
+        }
+        &.active-num{
+          background: #e09654;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  @media screen and(max-width:992px) {
+    #shop-area{
+      .left-side-shop{
+        padding: 0px 50px;
+      }
+      .page-title{
+        padding-top: 20px;
+        h3,p{
+          text-align: center;
+
+        }
+      }
+      .cat-toolbar{
+        .gridlist{
+          .toggle-grid{
+            display: none;
+          }
+        }
+        .resul-eccommerce{
+           color: #000;
+           font-weight: 500;
+           word-spacing: 2px;
+        }
+        .price-changes{
+          text-align: left;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  @media screen and(max-width:500px) {
+    #shop-area{
+      .left-side-shop{
+        padding: 0px;
+      }
+      .page-title{
+        padding-top: 20px;
+      }
+      .cat-toolbar{
+        
+      }
+    }
+  }

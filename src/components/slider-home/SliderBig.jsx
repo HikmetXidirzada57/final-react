@@ -2,39 +2,62 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import imgBanner from "../../images/main-banner-2.jpg";
-import imgBannaer2 from '../../images/Offer-banner.0.jpg'
 import Roll from "react-reveal/Roll";
 import Fade from "react-reveal/Fade";
 import LightSpeed from "react-reveal/LightSpeed";
-import Reveal from 'react-reveal/Reveal';
 import Pulse from 'react-reveal/Pulse';
-
+// import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import "./slider.scss";
-
+import ScrollToTop from 'react-scroll-to-top'
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Flip } from "react-reveal";
+
 
 const SliderBig = () => {
+  
   return (
-    <div className="slider-range">
-      <div className="col-lg-12 col-md-12 col-sm-12">
+    // <div className="col-lg-12 col-md-12 col-sm-12">
+        <div className="slider-range">
+          <ScrollToTop
+          smooth top="20" 
+          color="black"
+         />
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
+          // spaceBetween={50}
           slidesPerView={1}
           navigation
-          //   pagination={{ clickable: true }}
+          autoPlay
+          // breakpoints={{
+          //   // when window width is >= 640px
+          //   640: {
+          //     width: 640,
+          //     slidesPerView: 1,
+          //   },
+          //   // when window width is >= 768px
+          //   768: {
+          //     width: 768,
+          //     slidesPerView: 2,
+          //   },
+          //   1024:{
+          //     width:1000,
+          //     sliderPerview:1
+          //   },
+          //   2048:{
+          //     width:11000,
+          //     sliderPerview:1
+          //   }
+          // }}
         >
         
+
           <SwiperSlide>
-            <div className="col-md-12 col-sm-12">
             <Pulse>
-              <img className="img-fluid" src={imgBanner} alt="bannerImg" />
+              <img className="img-fluid" src={imgBanner} alt="bannerImg"/>
              </Pulse>
-             
+
               <div className="text-left">
                 <Roll>
                   <p>Summer Sale!</p>
@@ -48,16 +71,13 @@ const SliderBig = () => {
                 <LightSpeed left>
                   <button>Shop Now</button>
                 </LightSpeed>
-               
-              </div>
+
             </div>
           </SwiperSlide>
           {/* <SwiperSlide>
-            <div className="col-md-12 col-sm-12">
             <Slide left>
-              <img className="img-fluid" src={imgBannaer2} alt="bannerImg" />
+              <img className="img-fluid" src={imgBanner} alt="bannerImg" />
              </Slide>
-             
               <div className="text-left">
                 <Roll>
                   <p>Summer Sale!</p>
@@ -71,13 +91,15 @@ const SliderBig = () => {
                 <LightSpeed left>
                   <button>Shop Now</button>
                 </LightSpeed>
-               
-              </div>
+
             </div>
           </SwiperSlide> */}
         </Swiper>
+        {/* <div className="top-up">
+          <KeyboardArrowUpIcon className="arrow-up"/>
+      </div> */}
       </div>
-    </div>
+    // </div>
   );
 };
 

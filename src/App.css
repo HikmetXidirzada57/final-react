@@ -12,6 +12,70 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+*{
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  /* line-height: 24px; */
+}
+p{
+  font-size: 14px;
+  text-align: left;
+}
+h1{
+  color: #0000;
+  text-align: left;
+
+}
+a{
+  text-decoration: none;
+}
+span{
+  text-align: left;
+}
+.page-main{
+  padding: 40px 0 0;
+  background-color: #82828223;
+  
+}
+.container-mini{
+  width: 95%;
+  margin: auto;
+}
+.container-theme{
+  width:92%;
+  margin: auto;
+}
+.container-tema{
+  width: 92%;
+  margin: auto;
+}
+.background-components{
+  background-color: #82828223;
+  padding: 50px 0px;
+
+}
+.text-center{
+  text-align: center;
+}
+.page-title{
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  padding: 0 0 20px;
+  border-bottom: 1.5px solid #dcdcdc;
+  margin-bottom: 30px;
+}
+.page-title h1{
+  text-align: left;
+  line-height: 25px;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 0px;
+  color: #000;
+  margin-left: 5px;
+}
+.title-outer{
+  text-align: left;
+}
 
 .App-header {
   background-color: #282c34;

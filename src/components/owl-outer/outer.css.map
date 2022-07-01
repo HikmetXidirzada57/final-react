@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAEI,YAFQ,CAER,mBAAmB,EAFvB,YAAY,CAEY,mBAAmB,CAAA;EACpC,KAAK,EAAE,GAAG;EACV,KAAK,EAAE,KAAK;CACd",
+    "sources": [
+        "outer.scss"
+    ],
+    "names": [],
+    "file": "outer.css"
+}

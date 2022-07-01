@@ -1,0 +1,56 @@
+.product-category{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: #000;
+            display: block;
+        }
+    }
+    .wocommerce-category{
+        margin: 0 0 40px;
+        overflow: hidden;
+        padding: 0;
+        background-color: #fff;
+    
+    .widget-title{
+        text-align: left;
+       h3{ 
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        margin: 0;
+        padding: 15px 20px;
+        border-bottom: 0;
+       }
+    }
+        .product-cat-list{
+            padding: 15px 20px;
+            box-sizing: border-box;
+            text-align: left;
+            .cat-item-parent{
+                position: relative;
+                .expandble-icon{
+                    cursor: pointer;
+                     height: 24px;
+                     position: absolute;
+                     right: 0;
+                     top: 4px;
+                     width: 24px;
+                     z-index: 7;
+                     text-align: right;
+                     padding: 0 1px;
+                }
+            }
+            .cat-item{
+                a{
+                    font-weight: 400;
+                    word-break: break-all;
+                    padding: 4px 0;
+                }
+            }
+        }
+}
+}

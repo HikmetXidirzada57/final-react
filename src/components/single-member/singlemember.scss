@@ -1,0 +1,60 @@
+.staff{
+    position: relative;
+    // padding: 15px;
+    overflow: hidden;
+    &:hover{
+        .team-info{
+            background-color: #000000;
+            span{
+               color: #fff !important; 
+            }
+            a{
+               color: #fff !important;
+            }
+            .icon-social{
+               color: #fff !important;
+            }
+        }
+       }
+    .team-info{
+        padding: 6%;
+        overflow: hidden;
+        text-align: center;
+        margin-top: 8%;
+        bottom: 0;
+        background: #f7f7f7;
+        margin: 0 auto;
+        left: 20px;
+        right: 20px;
+        top: auto;
+        transition: 0.3s ease-in-out;
+        .staff-position{
+            text-align: center;
+            span{
+                color: #E09654;
+                font-size: 16px;
+            }
+        }
+        .staff-name{
+            padding: 5px 0px;
+            text-align: center;
+            a{
+                text-decoration: none;
+                font-size: 18px;
+               font-weight: 500;
+               color: #000000;
+               letter-spacing: 1px;
+            }
+        }
+        .staff-social-icon{
+            text-align: center;
+            .icon-social{
+                color: #7e7878;
+                font-size: 15px;
+                margin-left: 15px;
+            }
+        }
+    
+    }
+   
+}

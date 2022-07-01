@@ -10,9 +10,9 @@ import './blog.scss'
 import Singleblog from '../single-blog/Singleblog';
 const Blog = () => {
   return (
-    <div className='wpg-blog'>
+    <div className='background-components'>
         <div className="container-mini">
-        <div className="shortcode-title">
+        <div className="page-title">
             <h1>From The Blog</h1>
           </div>
           <Swiper

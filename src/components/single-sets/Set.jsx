@@ -4,17 +4,13 @@ import bannaerimg from "../../images/Cms-banner-01.jpg";
 import './set.scss'
 const Set = () => {
   return (
- 
-       <div className="col-lg-6 col-md-6">
+       <div className="col-lg-6 col-md-6 col-sm-12">
         <div className="coloumn-inner">
         <div className="wrapper">
           <div className="banner-img">
             <Link to="#">
               <img className="img-fluid" src={bannaerimg} alt=""/>
             </Link>
-            <div className="hover-effect">
-                
-            </div>
           </div>
           <div className="static-wrapp">
             <h4>Dinnerware Sets</h4>

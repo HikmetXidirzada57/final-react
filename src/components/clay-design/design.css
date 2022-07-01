@@ -1,0 +1,149 @@
+.wpg-design {
+  position: relative;
+  padding: 30px 0px;
+  background-color: #82828223;
+  display: block;
+  overflow: hidden;
+}
+
+.wpg-design::before {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  right: 51%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+}
+
+.wpg-design::after {
+  content: "";
+  bottom: 50%;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+}
+
+.wpg-design img {
+  vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wpg-design .static-wpg {
+  position: absolute;
+  top: 33%;
+  left: 14%;
+  text-align: left;
+}
+
+.wpg-design .static-wpg .blow {
+  display: block;
+  padding-bottom: 14px;
+  font-size: 28px;
+  line-height: 32px;
+  color: #fff;
+}
+
+.wpg-design .static-wpg .textmini {
+  display: block;
+  padding-bottom: 50px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #bebebe;
+}
+
+.wpg-design .static-wpg .shopButton {
+  padding: 11px 25px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #e09654;
+}
+
+@media screen and (max-width: 1100px) {
+  .wpg-design .static-wpg {
+    top: 28%;
+    left: 11%;
+  }
+  .wpg-design .static-wpg .blow {
+    padding-bottom: 8px;
+  }
+  .wpg-design .static-wpg .textmini {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wpg-design .static-wpg {
+    top: 28%;
+    left: 11%;
+  }
+  .wpg-design .static-wpg .blow {
+    padding-bottom: 8px;
+    font-size: 20px;
+  }
+  .wpg-design .static-wpg .textmini {
+    padding-bottom: 20px;
+    font-size: 13px;
+  }
+  .wpg-design .static-wpg .shopButton {
+    padding: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .wpg-design {
+    height: auto;
+  }
+  .wpg-design .container-mini {
+    width: 90%;
+  }
+  .wpg-design .static-wpg {
+    top: 20%;
+    left: 10%;
+  }
+  .wpg-design .static-wpg .blow {
+    padding-bottom: 5px;
+    font-size: 16px;
+  }
+  .wpg-design .static-wpg .textmini {
+    padding-bottom: 10px;
+    font-size: 11px;
+  }
+  .wpg-design .static-wpg .shopButton {
+    padding: 3px 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wpg-design {
+    height: auto;
+  }
+  .wpg-design .container-mini {
+    width: 90%;
+  }
+  .wpg-design .static-wpg {
+    top: 17%;
+    left: 10%;
+  }
+  .wpg-design .static-wpg .blow {
+    padding-bottom: 0px;
+    font-size: 12px;
+    margin: 0;
+  }
+  .wpg-design .static-wpg .textmini {
+    padding-bottom: 0px;
+    font-size: 8px;
+  }
+  .wpg-design .static-wpg .shopButton {
+    padding: 3px 5px;
+    font-size: 8px;
+  }
+}
+/*# sourceMappingURL=design.css.map */

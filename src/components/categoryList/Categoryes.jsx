@@ -13,9 +13,9 @@ const Categoryes = () => {
        setActive(!isactive)
     }
   return (
-    <div className="box-category">
+    <div className="box-category" onClick={()=>clickToggle(setActive)}>
     <div className="d-flex justify-content-around align-items-center">
-      <span className="cat-nav" onClick={()=>clickToggle(setActive)}> 
+      <span className="cat-nav"> 
         <ListOutlinedIcon  className="menuicon"/>
       </span>
       <span className="veritical-menu">All Categories</span>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,WADO,CACP,GAAG,CAAA;EACA,OAAO,EAAE,GAAG;EACZ,UAAU,EAAE,gBAAgB;CAC9B;;AAJL,AAMQ,WANG,AAKN,MAAM,CACH,GAAG,CAAA;EACC,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "singleOut.scss"
+    ],
+    "names": [],
+    "file": "singleOut.css"
+}

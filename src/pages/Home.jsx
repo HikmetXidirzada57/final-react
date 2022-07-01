@@ -1,5 +1,5 @@
 import React from 'react'
-import SingleProducts from '../components/best-seller-single/SingleProducts'
+// import SingleProducts from '../components/best-seller-single/SingleProducts'
 import BestProducts from '../components/best-seller/BestProducts'
 import Design from '../components/clay-design/Design'
 import DaysProducts from '../components/dealOfTheday/DaysProducts'
@@ -9,7 +9,8 @@ import Outer from '../components/owl-outer/Outer'
 import RecProducts from '../components/recommended/RecProducts'
 import SliderBig from '../components/slider-home/SliderBig'
 import Blog from '../components/blogs/Blog'
-import './home.scss'
+import Thumb from '../components/slider-thumb/Thumb'
+// import './home.scss'
 
 const Home = () => {
   return (
@@ -18,11 +19,12 @@ const Home = () => {
       <Wrapper/>
       <BestProducts/>
       <Design/>
-      <DaysProducts/>
+      <DaysProducts/> 
       <RecProducts/>
       <Inner/>
       <Outer/>
       <Blog/>
+      {/* <Thumb/> */}
     </div>
   )
 }

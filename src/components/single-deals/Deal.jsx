@@ -15,6 +15,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import CompareIcon from "@mui/icons-material/Compare";
 
 const Deal = () => {
+
   const [value, setValue] = React.useState(2);
 
   <Rating
@@ -26,8 +27,8 @@ const Deal = () => {
   />;
   return (
     <div className="deal-item">
-      <div className="d-flex">
-        {/* <div className="col-lg-6 col-md-12 col-sm-12"> */}
+      <div className="d-flex flex-wrap">
+   
         <div className="feature-image">
           <Swiper
             // effect={"cube"}
@@ -43,17 +44,15 @@ const Deal = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img className="img-fluid" src={deal1} alt="" />
+              <img className="img-fluid" src={deal1} alt=""/>
             </SwiperSlide>
             <SwiperSlide>
-              <img className="img-fluid" src={deal2} alt="" />
+              <img className="img-fluid" src={deal2} alt=""/>
             </SwiperSlide>
           </Swiper>
           <span className="on-sale">Sale</span>
         </div>
-        {/* </div> */}
 
-        {/* <div className="col-lg-6 col-md-12 col-sm-12"> */}
         <div className="product-detail">
           <Link to="#">Title of the product</Link>
           <div className="rating">
@@ -108,10 +107,10 @@ const Deal = () => {
             </div>
           </div>
         </div>
-        {/* </div> */}
       </div>
     
     </div>
+    // </div>
   );
 };
 

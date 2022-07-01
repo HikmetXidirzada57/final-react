@@ -1,12 +1,6 @@
 
-  
-    .coloumn-inner{
-        padding-right: 30px;
-        width: auto;
-        padding-top: 30px;
-        background-color: #f2f2f2;
-        margin-bottom: 80px;
 
+    .coloumn-inner{
             .wrapper{
                 position: relative;
                 background: rgba(0,0,0,.6);
@@ -24,7 +18,7 @@
                     left: 8%;
                     text-align: left;
                     font-style: inherit;
-        
+
                     h4{
                         color: #fff;
                         font-size: 24px;
@@ -36,7 +30,7 @@
                         color: #bebebe;
                         font-size: 14px;
                         font-weight: 400;
-                    
+
                     }
                     a{
                         position: relative;
@@ -54,10 +48,93 @@
                             background-color: #e09654;
                             bottom: 0;
                             height: 1px;
-                        }              
+                        }
                     }
                 }
             }
-        
-      
     }
+@media screen and (max-width:1200px) {
+ .coloumn-inner{
+    .wrapper{
+        .static-wrapp{
+            top: 20%;
+            h4{
+                font-size: 18px;
+            }
+            p{
+                font-size: 12px;
+            }
+            a{
+                padding-top:30px;
+            }
+        }
+    }
+ }
+    
+}
+@media screen and (max-width:990px) {
+    .coloumn-inner{
+       .wrapper{
+           .static-wrapp{
+               top: 20%;
+               h4{
+                   font-size: 15px;
+               }
+               p{
+                   font-size: 12px;
+                   padding: 0;
+                   margin: 0;
+               }
+               a{
+                   padding-top:30px;
+                   font-size: 13px;
+               }
+           }
+       }
+    }
+       
+   }
+   @media screen and (max-width:768px) {
+    .coloumn-inner{
+       .wrapper{
+        margin-bottom: 15px;
+           .static-wrapp{
+               top: 25%;
+               h4{
+                   font-size: 18px;
+               }
+               p{
+                   font-size: 12px;
+                   padding: 0;
+                   margin: 0;
+               }
+               a{
+                   padding-top:50px;
+               }
+           }
+       }
+    }
+       
+   }
+   @media screen and (max-width:460px) {
+    .coloumn-inner{
+       .wrapper{
+        margin-bottom: 15px;
+           .static-wrapp{
+               top: 25%;
+               h4{
+                   font-size: 15px;
+               }
+               p{
+                   font-size: 12px;
+                   padding: 0;
+                   margin: 0;
+               }
+               a{
+                   padding-top:30px;
+               }
+           }
+       }
+    }
+       
+   }
