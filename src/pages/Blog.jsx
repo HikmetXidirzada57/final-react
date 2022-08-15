@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Search from "../components/input-search/Search";
 import Singleblog from "../components/single-blog/Singleblog";
 import ScrollToTop from 'react-scroll-to-top'
+import { useSelector, useDispatch } from "react-redux";
 
 import './blog.scss'
+import { blogListAction } from "../Redux/Actions/BlogAction";
 
 const Blog = () => {
+  
+  const dispatch = useDispatch();
+  // const {blogs}  = useSelector((state) => state);
+  const {blogs}  = useSelector((state) => state.listBlog);
+  useEffect(() => {
+    dispatch(blogListAction());
+  }, [dispatch]);
+
   return (
     <div className="background-components">
       <ScrollToTop smooth top="20" color="black" />
@@ -86,18 +96,11 @@ const Blog = () => {
               <h1>All Blog</h1>
             </div>
             <div className="row">
-              <div className="col-lg-6 col-md-12">
-                <Singleblog/>
-              </div>
-              <div className="col-lg-6  col-md-12">
-                <Singleblog/>
-              </div>
-              <div className="col-lg-6  col-md-12">
-                <Singleblog/>
-              </div>
-              <div className="col-lg-6  col-md-12">
-                <Singleblog/>
-              </div>
+              { blogs && blogs.map((blog)=>(
+                  <div className="col-lg-6 col-md-12" key={blog.id}>
+                  <Singleblog data={blog}/>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ const Cart = () => {
                   <th>qty</th>
                   <th>Price </th>
                   <th>Sub Total</th>
-                  <th>Action</th>
+                  <th>Remove</th>
                 </tr>
               </thead>
               <tbody>
@@ -39,10 +39,10 @@ const Cart = () => {
                   <td>
                     {/* {item.discount ? ( */}
                     <>
-                      <del>price</del> <span>discount</span> AZN
+                      <del></del> <span></span> AZN
                     </>
                     {/* // ) : ( */}
-                    <span>price AZN</span>
+                    <span></span>
                     {/* )} */}
                   </td>
                   <td>
@@ -73,7 +73,7 @@ const Cart = () => {
                 Azn
               </h5>
               <hr />
-              <button className="btn my-3 btn-success w-100">Purchase</button>
+              <button className="btn my-3 btn-success w-58">Purchase</button>
               <button className="btn btn-outline-danger">
                 Remove all Cart
               </button>

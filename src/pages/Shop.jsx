@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ShopCategory from "../components/category-shop/ShopCategory";
 import WindowRoundedIcon from "@mui/icons-material/WindowRounded";
 import TableRowsRoundedIcon from "@mui/icons-material/TableRowsRounded";
 import { Slider } from "@mui/material";
 import "./shop.scss";
+import { useDispatch, useSelector } from "react-redux";
+
 import SingleProducts from "../components/best-seller-single/SingleProducts";
 import singleImage from "../images/2-1-256x360.jpg";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import ScrollToTop from "react-scroll-to-top";
+import { productListAction } from "../Redux/Actions/ProductActions";
 
 function valuetext(value) {
   return `${value} AZN`;
@@ -18,6 +21,12 @@ const Shop = () => {
   const handleChange = (event, newValue) => {
     setPrice(newValue);
   };
+  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.allProduct);
+  useEffect(() => {
+    dispatch(productListAction());
+  }, [dispatch]);
+
   return (
     <div id="shop-area">
       <ScrollToTop smooth top="20" color="black" />
@@ -93,42 +102,11 @@ const Shop = () => {
             </div>
           </div>
           <div className="row justify-content-between">
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <SingleProducts data={singleImage} />
-            </div>
+            {products.map((product) => (
+              <div className="col-lg-3 col-md-4 col-sm-6">
+                <SingleProducts data={product} />
+              </div>
+            ))}
           </div>
           <div className="wcommerce-pagination">
             <ul className="list-unstyled d-flex">

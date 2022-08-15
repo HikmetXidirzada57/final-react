@@ -2,6 +2,10 @@
    margin-bottom: 15px;
     .img-blog{
         position: relative;
+        img{
+            max-width: 350px;
+            object-fit: cover;
+        }
         .hover-blog{
           position: absolute;
           top: 50%;

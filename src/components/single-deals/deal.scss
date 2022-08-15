@@ -3,6 +3,11 @@
 
     .feature-image{
       position: relative;
+      img{
+        object-fit: fill;
+        vertical-align: middle;
+        height: 300px;
+      }
       .on-sale{
         margin: 0;
         position: absolute;

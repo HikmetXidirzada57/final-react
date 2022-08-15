@@ -1,5 +1,9 @@
 .owl-item{
     position: relative;
+    img{
+        object-fit: cover;
+        height: 350px;
+    }
     &:hover{
         .block-hover{
             visibility: visible;
@@ -36,7 +40,7 @@
     .sale-percent{
         position: absolute;
         top: 10px;
-        left: 15%;
+        left: 5%;
         margin: 0;
         display: inline-block;
         background: #e09654;

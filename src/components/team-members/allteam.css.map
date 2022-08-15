@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,YAAY,CAAA;EACR,UAAU,EAAE,EAAG;EACf,aAAa,EAAE,IAAI;EACnB,WAAW,EAAE,IAAI;EACjB,cAAc,EAAE,IAAI;EACpB,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,IAAI;CACd",
-    "sources": [
-        "allteam.scss"
-    ],
-    "names": [],
-    "file": "allteam.css"
-}

@@ -1,0 +1,27 @@
+.blog-detail{
+    padding: 30px 0px;
+     background-color: rgba(128, 128, 128, 0.415);
+    img{
+        border-radius: 4px;
+    }
+    text-align: left;
+    .blog-name{
+        color: black;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 15px;
+    }
+    .publish-date{
+        color: #e09654;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .blog-desc{
+        color: grey;
+    }
+    .blog-desc{
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+    }
+}

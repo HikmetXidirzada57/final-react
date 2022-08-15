@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -10,41 +10,48 @@ import CompareIcon from "@mui/icons-material/Compare";
 import "./singleproduct.scss";
 import { Rating } from "@mui/material";
 
-const SingleProducts = ({data}) => {
+const SingleProducts = ({ data }) => {
   return (
-      
-        <div className="owl-item">
-          <Link to="#">
-            <img className="img-fluid" src={data} alt="" />
-          </Link>
-          <div className="block-hover">
-            <div className="shopping-cart">
-              <ShoppingCartIcon className="cart" />
+    <div className="owl-item">
+      <Link to={`product/${data.id}`}>
+        {data && (
+          <div key={data.id}>
+            <img className="img-fluid" src={data.photoUrl} alt="" />
+            <div className="block-hover">
+              <div className="shopping-cart">
+                <ShoppingCartIcon className="cart" />
+              </div>
+              <div className="like">
+                <FavoriteIcon className="favorite" />
+              </div>
+              <div className="compare">
+                <CompareIcon className="compar" />
+              </div>
+              <div className="review">
+                <Link to="">
+                  <VisibilityIcon className="visibility"/>
+                </Link>
+              </div>
             </div>
-            <div className="like">
-              <FavoriteIcon className="favorite" />
-            </div>
-            <div className="compare">
-              <CompareIcon className="compar" />
-            </div>
-            <div className="review">
-              <Link to="">
-                <VisibilityIcon className="visibility" />
+            <span className="sale-percent">10%</span>
+            <div className="detail-wrapper">
+              <span>
+                <Rating
+                  name="size-large"
+                  defaultValue={2}
+                  size="large"
+                  className="raiting"
+                />
+              </span>
+              <Link to="#">
+                <h3>{data.name}</h3>
               </Link>
+              <span className="price">${data.price}</span>
             </div>
           </div>
-          <span className="sale-percent">10%</span>
-          <div className="detail-wrapper">
-            <span>
-            <Rating name="size-large" defaultValue={2} size="large" className="raiting" />
-            </span>
-            <Link to="#">
-              <h3>Lorem ispum dolar amor</h3>
-            </Link>
-            <span className="price">$150</span>
-          </div>
-        </div>
-      
+        )}
+      </Link>
+    </div>
   );
 };
 
