@@ -30,7 +30,11 @@ const Blog = () => {
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={50}
               slidesPerView={2}
-              // navigation
+              loop={true}
+              autoplay={{
+                  delay: 500,
+                  disableOnInteraction: false
+              }}
           >
             {blogs && blogs.map((data)=>(
                <SwiperSlide key={data.id}>

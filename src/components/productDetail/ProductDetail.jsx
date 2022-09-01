@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./detail.scss";
 import bannerImg from "../../images/right-banner.jpg";
@@ -34,21 +34,31 @@ const ProductDetail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const [categoryId, setCategoryId] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+
+  const btnDecrement = () => {
+    if (quantity > 1) {
+      setQuantity((prevCount) => prevCount - 1);
+    }
+  };
+  const btnIcrement = () => {
+    if (quantity > 0) {
+      setQuantity((prevCount) => prevCount + 1);
+    }
+  };
   const getProductById = useCallback(async () => {
     const response = await (await fetch(`${API_URL}/product/${id}`)).json();
     setoneProduct(response);
     setCategoryId(response.categoryId);
   }, [id]);
-  console.log("aaaaa\n\n\n\n");
-  console.log(related);
-  console.log("aaaaaa\n\n\n\n");
+  console.log(oneProduct);
   const getRelated = useCallback(() => {
     if (categoryId !== null) {
       fetch(`${API_URL}/product/getRelated/${id}/${categoryId}`)
         .then((res) => res.json())
         .then((res) => setRelated(res));
     }
-  }, [id,categoryId]);
+  }, [id, categoryId]);
 
   useEffect(() => {
     getProductById();
@@ -61,6 +71,7 @@ const ProductDetail = () => {
     const quantity = findItem ? findItem.quantity + 1 : 1;
     dispatch(AddToCart(id, quantity));
   };
+  // console.log(oneProduct.productTags.tags.name);
   return (
     <div id="mainDetail" className="background-components">
       <ScrollToTop smooth top="20" color="black" />
@@ -106,7 +117,7 @@ const ProductDetail = () => {
                   >
                     <SwiperSlide>
                       <Zoom
-                        zoomScale={2}
+                        zoomScale={1.5}
                         width={500}
                         height={500}
                         transitionTime={0.5}
@@ -150,16 +161,14 @@ const ProductDetail = () => {
                     </span>
                     <span className="tagged-as">
                       Tags:
-                      <Link className="fonts" to="#">
-                        {" "}
-                        {/* oneProduct.productTags.forEach(element => {
-                            
-                          });, */}
-                      </Link>
-                      <Link className="fonts" to="#">
-                        {" "}
-                        Winter
-                      </Link>
+                        <>
+                          {oneProduct.productTags?.map((tag) => (
+                            <Link className="fonts" to="#">
+                              {tag.tag.name}
+                            </Link>
+                          ))}
+                        </>
+                    
                     </span>
                   </div>
                   <div className="price">
@@ -177,12 +186,32 @@ const ProductDetail = () => {
                   <div className="wo-product-details">
                     <p className="desc">{oneProduct.description}</p>
                   </div>
-                  <p className="inStock">In-stock-({oneProduct.inStock})</p>
+                  <p className="inStock">
+                    In-stock-
+                    {oneProduct.inStock < 1 && oneProduct.inStock == null ? (
+                      <>
+                        <strong>is about to be exhausted</strong>
+                      </>
+                    ) : (
+                      <>({oneProduct.inStock}</>
+                    )}
+                    )
+                  </p>
                   <form className="d-flex flex-wrao" action="">
                     <div className="quantity">
-                      <input className="minus" type="button" value="-" />
-                      <input className="qty" type="number" value={1} />
-                      <input className="plus" type="button" value="+" />
+                      <input
+                        className="minus"
+                        type="button"
+                        value="-"
+                        onClick={btnDecrement}
+                      />
+                      <input className="qty" type="number" value={quantity} />
+                      <input
+                        className="plus"
+                        type="button"
+                        value="+"
+                        onClick={btnIcrement}
+                      />
                     </div>
                     <button
                       type="button"
@@ -224,11 +253,11 @@ const ProductDetail = () => {
                 slidesPerView={5}
                 navigation
               >
-                {related.map((rel)=>(
-                    <SwiperSlide key={rel.id}>
-                      <SingleProducts data={rel} />
-                    </SwiperSlide>
-                  ))}
+                {related?.map((rel) => (
+                  <SwiperSlide key={rel.id}>
+                    <SingleProducts data={rel} />
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
           </div>

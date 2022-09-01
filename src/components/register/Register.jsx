@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom';
 const Register = () => {
     const dispatch=useDispatch()
     const { register,
-        handleSubmit,
-          formState: { errors,isSubmitting,isValid } } = useForm({mode:"all"});
-    const handleFormSubmit = (data) => {  
+            handleSubmit,
+            formState: { errors,isSubmitting,isValid } } = useForm({mode:"all"});
+        const handleFormSubmit = (data) => {  
          
         dispatch(registerAction(data.email,data.firstName,data.lastName,data.password,data.confirmPassword))
         };
@@ -37,7 +37,7 @@ const Register = () => {
           <Box component="form" onSubmit={handleSubmit(handleFormSubmit)} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
-              required
+              required={true}
               fullWidth
               id="email"
               label="Email Address"

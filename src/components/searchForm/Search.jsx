@@ -5,10 +5,11 @@ import axios from "axios";
 import { API_URL } from "../../link/URL";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import CachedIcon from '@mui/icons-material/Cached';
+
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [products, setProduct] = useState([]);
-  
   const getProducts = useCallback(async () => {
     if (searchTerm !== "") {
       const { data } = await axios.post(`${API_URL}/product/filter`,{ q: searchTerm },
@@ -19,12 +20,11 @@ const Search = () => {
         }
       );
       setProduct(data.products);
-      console.log(data);
     } else {
       setProduct([]);
     }
   }, [searchTerm]);
-
+  console.log(products);
   useEffect(() => {
     getProducts();
   }, [getProducts]);
@@ -54,18 +54,23 @@ const Search = () => {
         <div className="search-icon">
           <SearchIcon />
         </div>
-        <div className="list-result"
+
+      </form>
+      <div className="list-result"
          ref={resultRef}
          >
           <ul className="list-unstyled m-0 p-0">
-            {products.products?.map((p) => (
+            {products?.map((p) => (
               <li key={p.id}>
-                <Link to={`/product/${p.id}`}>{p.name}</Link>
+                <div>
+                <CachedIcon/>
+                <Link className="mx-2" to={`/product/${p.id}`}>{p.name}</Link> 
+                </div>
+                <div className="search-image"><img className="img-fluid" src={p.photoUrl} alt="" /></div>
               </li>
             ))}
           </ul>
         </div>
-      </form>
     </div>
   );
 };

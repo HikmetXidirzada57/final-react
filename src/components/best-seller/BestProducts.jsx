@@ -29,23 +29,29 @@ const BestProducts = () => {
             spaceBetween={10}
             slidesPerView={5}
             navigation
-            // breakpoints={{
-            //   // when window width is >= 640px
-            //   640: {
-            //     width: 640,
-            //     slidesPerView: 1,
-            //   },
-            //   // when window width is >= 768px
-            //   768: {
-            //     width: 768,
-            //     slidesPerView: 2,
-            //   },
-            //   1024:{
-            //     width:1000,
-            //     sliderPerview:1
-            //   },
+          //   breakpoints={{
+          //     // when window width is >= 640px
+          //     375:{
+          //      width:1000,
+          //      slidesPerView:1,
+          //     },
 
-            // }}
+          //     640: {
+          //       width: 1000,
+          //       slidesPerView: 1,
+          //     },
+          //     // when window width is >= 768px
+          //     768: {
+          //       width: 1768,
+          //       slidesPerView: 2,
+          //     },
+          //     1024:{
+          //       width:10000,
+          //       sliderPerview:1
+          //     },
+
+          //   }
+          // }
           >
             {products.map((pro) => (
               <SwiperSlide key={pro.id}>

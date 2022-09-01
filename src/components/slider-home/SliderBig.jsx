@@ -16,12 +16,12 @@ import { Slide } from "react-reveal";
 import { API_URL } from "../../link/URL";
 
 const SliderBig = () => {
-  // const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState(null);
 
   // useEffect(() => {
-  //     const { sliders } = fetch(`${API_URL}/product/getAll`)
+  //     const { sliders } = fetch(`${API_URL}/product/getSlider`)  
   //       .then((res) => res.json())
-  //       .then((sp) => setProduct(sp));
+  //       .then((json) => setProduct(json));
   //       console.log(sliders)
   //   },[]);
 
@@ -36,6 +36,10 @@ const SliderBig = () => {
         slidesPerView={1}
         navigation
         loop={true}
+        autoplay={{
+            delay: 100,
+            disableOnInteraction: false
+        }}
         // breakpoints={{
         //   // when window width is >= 640px
         //   640: {

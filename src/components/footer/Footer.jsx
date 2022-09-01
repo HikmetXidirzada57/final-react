@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 import paymenyImg from "../../images/images.jpg";
 
 const Footer = () => {
-  const [activeUl, setActiveUl] = useState(false);
-  const [isBlock, setBlock] = useState(false);
-  const [isThird, setisThird] = useState(false);
-  const [isFourth, setisFourth] = useState(false);
-  const [isLast, setisLast] = useState(false);
+  const [activeUl, setActiveUl] = useState(true);
+  const [isBlock, setBlock] = useState(true);
+  const [isThird, setisThird] = useState(true);
+  const [isFourth, setisFourth] = useState(true);
+  const [isLast, setisLast] = useState(true);
 
   const handleFirst = () => {
     setActiveUl(!activeUl);
@@ -65,7 +65,7 @@ const Footer = () => {
                       <li>
                         <div className="phone">
                           <span>
-                            <ContactPhoneIcon className="foot-icon"/>
+                            <ContactPhoneIcon className="foot-icon" />
                           </span>
                           <span>+994554770076</span>
                         </div>
@@ -84,7 +84,7 @@ const Footer = () => {
                     className="footer-click d-none"
                     onClick={() => handleFirst()}
                   >
-                    <KeyboardArrowDownIcon sx={{ color: "#fff" }}/>
+                    <KeyboardArrowDownIcon sx={{ color: "#fff" }} />
                   </div>
                 </div>
               </div>
@@ -165,7 +165,7 @@ const Footer = () => {
                     <div className="title">
                       <h3>Policy</h3>
                     </div>
-                    <ul className={isFourth ? "toggle-block" : null}>
+                    <ul className={isFourth ? "toggle-block p-0" : null}>
                       <li>
                         <Link to="#">About Us</Link>
                       </li>

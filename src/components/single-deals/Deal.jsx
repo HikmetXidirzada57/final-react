@@ -1,7 +1,5 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import deal1 from "../../images/11.jpg";
-import deal2 from "../../images/12.jpg";
 import "./deal.scss";
 import "swiper/css";
 import "swiper/css/effect-cube";
@@ -13,9 +11,20 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import CompareIcon from "@mui/icons-material/Compare";
+import { useDispatch, useSelector } from "react-redux";
+import { AddToCart } from "../../Redux/Actions/CartActions";
 
 const Deal = ({ data }) => {
   const [value, setValue] = React.useState(2);
+  const dispatch = useDispatch();
+  const { cartItems } = useSelector((ct) => ct.cart);
+
+  const handleToCart = (id) => {
+    const findItem =
+      cartItems.length > 0 ? cartItems.find((ct) => ct.id === id) : null;
+      const quantity=findItem ? findItem.quantity+1 :1;
+    dispatch(AddToCart(id,quantity));
+  };
 
   <Rating
     name="simple-controlled"
@@ -26,32 +35,30 @@ const Deal = ({ data }) => {
   />;
   return (
     <div className="deal-item">
-      <div className="d-flex flex-wrap">
-        <div className="feature-image">
-          <Swiper
-            // effect={"cube"}
-            // grabCursor={true}
-            // cubeEffect={{
-            //   shadow: true,
-            //   slideShadows: true,
-            //   shadowOffset: 20,
-            //   shadowScale: 0.94,
-            // }}
-            pagination={true}
-            modules={[EffectCube, Pagination]}
-            className="mySwiper"
-          >
-            {data && (
+      {data && (
+        <div className="d-flex flex-wrap">
+          <div className="feature-image">
+            <Swiper
+              effect={"cube"}
+              grabCursor={true}
+              cubeEffect={{
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+              }}
+              pagination={true}
+              modules={[EffectCube, Pagination]}
+              className="mySwiper"
+            >
               <SwiperSlide>
                 <img className="img-fluid" src={data.photoUrl} alt="" />
               </SwiperSlide>
-            )}
-          </Swiper>
-          <span className="on-sale">Sale</span>
-        </div>
-        {data && (
+            </Swiper>
+            <span className="on-sale">Sale</span>
+          </div>
           <div className="product-detail">
-            <Link to="#">{data.name}</Link>
+            <Link to={`product/${data.id}`}>{data.name}</Link>
             <div className="rating">
               <Rating name="read-only" value={value} readOnly />
             </div>
@@ -63,9 +70,7 @@ const Deal = ({ data }) => {
               </span>
             </div>
             <div className="description">
-              <p>
-                {data.description}
-              </p>
+              <p>{data.description}</p>
             </div>
             <div className="count-down">
               <span className="down">
@@ -86,7 +91,10 @@ const Deal = ({ data }) => {
               </span>
             </div>
             <div className="block-hover">
-              <div className="shopping-cart">
+              <div
+                className="shopping-cart"
+                onClick={() => handleToCart(data.id)}
+              >
                 <ShoppingCartIcon className="cart" />
               </div>
               <div className="like">
@@ -102,8 +110,8 @@ const Deal = ({ data }) => {
               </div>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
     // </div>
   );

@@ -1,31 +1,52 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ShopCategory from "../components/category-shop/ShopCategory";
 import WindowRoundedIcon from "@mui/icons-material/WindowRounded";
 import TableRowsRoundedIcon from "@mui/icons-material/TableRowsRounded";
 import { Slider } from "@mui/material";
 import "./shop.scss";
-import { useDispatch, useSelector } from "react-redux";
-
 import SingleProducts from "../components/best-seller-single/SingleProducts";
-import singleImage from "../images/2-1-256x360.jpg";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import ScrollToTop from "react-scroll-to-top";
-import { productListAction } from "../Redux/Actions/ProductActions";
+import ReactPaginate from "react-paginate";
+import { API_URL } from "../link/URL";
+import axios from "axios";
 
 function valuetext(value) {
   return `${value} AZN`;
 }
+const handlePageClick = () => {};
+
 const Shop = () => {
-  const [price, setPrice] = React.useState([0, 3000]);
+  const [price, setPrice] = React.useState([0, 10000]);
+  const [tag, setTag] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [sortBy, setsortBy] = useState(2);
+  const [loading, setLoading] = useState(false);
   const handleChange = (event, newValue) => {
     setPrice(newValue);
   };
-  const dispatch = useDispatch();
-  const { products } = useSelector((state) => state.allProduct);
+
+  const getAllProducts = useCallback(async () => {
+    const res = await axios.post(`${API_URL}/product/filter`, {
+      minPrice: price[0],
+      maxPrice: price[1],
+      sortBy,
+    });
+    setProducts(res.data.products);
+  }, [price, sortBy]);
+
+  const getAllTags = async () => {
+    const { data } = await axios.get(API_URL + "/tag/getAll");
+    setTag(data);
+  };
+
   useEffect(() => {
-    dispatch(productListAction());
-  }, [dispatch]);
+    getAllTags();
+  }, []);
+
+  useEffect(() => {
+    getAllProducts();
+  }, [getAllProducts]);
 
   return (
     <div id="shop-area">
@@ -52,11 +73,7 @@ const Shop = () => {
                 <h3>Product tags</h3>
               </div>
               <div className="tag-cloud">
-                <Link to="#">Fashion</Link>
-                <Link to="#">Summer</Link>
-                <Link to="#">viverra</Link>
-                <Link to="#">winter</Link>
-                <Link to="#">Lifestyle</Link>
+                {tag && tag.map((t) => <Link to="#">{t.name}</Link>)}
               </div>
             </div>
           </div>
@@ -75,7 +92,7 @@ const Shop = () => {
               technical
             </p>
           </div>
-          <div className="cat-toolbar">
+          <div className="cat-toolbar pb-3">
             <div className="row justify-content-between">
               <div className="col-lg-3">
                 <div className="d-flex">
@@ -90,38 +107,53 @@ const Shop = () => {
                   <p className="resul-ecommerce">Showing results</p>
                 </div>
               </div>
+
               <div className="col-lg-3">
-                <select className="price-changes">
-                  <option disabled="true" value="">
-                    Default
+                <select
+                  className="price-changes form-control"
+                  onChange={(e) => setsortBy(e.target.value)}
+                >
+                  <option style={{ fontFamily: "sans-serif" }} value={2}>
+                    New products
                   </option>
-                  <option value="">Sort by price low to high</option>
-                  <option value="">Sort by price high to low</option>
+                  <option style={{ fontFamily: "monospace" }} value={1}>
+                    Sort by price low to high
+                  </option>
+                  <option style={{ fontFamily: "monospace" }} value={0}>
+                    Sort by price high to low
+                  </option>
                 </select>
               </div>
             </div>
           </div>
+
           <div className="row justify-content-between">
-            {products.map((product) => (
+            {products?.map((pro) => (
               <div className="col-lg-3 col-md-4 col-sm-6">
-                <SingleProducts data={product} />
+                <SingleProducts loading={loading} key={pro.id} data={pro}/>
               </div>
             ))}
           </div>
           <div className="wcommerce-pagination">
-            <ul className="list-unstyled d-flex">
-              <li>
-                <span className="page active-num">1</span>
-              </li>
-              <li>
-                <span className="page">2</span>
-              </li>
-              <li>
-                <span className="page">
-                  <ArrowRightAltIcon className="arrow-right" />
-                </span>
-              </li>
-            </ul>
+            <ReactPaginate
+              previousLabel={"previous"}
+              nextLabel={"next"}
+              breakLabel={"..."}
+              pageCount={10}
+              marginPagesDisplayed={2}
+              pageRangeDisplayed={3}
+              onPageChange={handlePageClick}
+              containerClassName={"pagination justify-content-center"}
+              pageClassName={"page-item"}
+              pageLinkClassName={"page-link"}
+              previousClassName={"page-item"}
+              previousLinkClassName={"page-link"}
+              nextClassName={"page-item"}
+              nextLinkClassName={"page-link"}
+              breakClassName={"page-item"}
+              breakLinkClassName={"page-link"}
+              activeClassName={"active"}
+            />
           </div>
         </div>
       </div>

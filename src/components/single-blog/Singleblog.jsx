@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import AddLinkIcon from "@mui/icons-material/AddLink";
 import "./singleblog.scss";
+import Moment from 'moment';
 
 const Singleblog = ({data}) => {
+
+  const formatDate = Moment().format('DD-MM-YYYY')
+
   return (
     <div className="blog-item">
       {data && (
@@ -30,7 +34,7 @@ const Singleblog = ({data}) => {
               <Link to={`blogDetail/${data.id}`}>{data.name}</Link>
             </div>
             <div className="date-post">
-              <p>5th January of 2022</p>
+              <p>{formatDate}</p>
             </div>
             <div className="post-description">
               <p>

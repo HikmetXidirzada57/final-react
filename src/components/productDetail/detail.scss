@@ -5,11 +5,11 @@
         color: #000;
     }
     .swiper{
-        max-height: 500px;
+        max-height: 480px;
     }
-    .mySwiper{
-        height: 10% !important;
-    }
+    // .mySwiper{
+    //     height: 10% !important;
+    // }
     .page-breadcumps{
         display: inline-block;
         width: 100%;
@@ -128,6 +128,16 @@
         padding: 0px 14px;
         font-size: 13px;
         font-weight: 600;
+        transition: 0.3s ease-in-out;
+        &.active{
+            display: none;
+        }
+    }
+    .reomve{
+        padding: 0px 14px;
+        font-size: 13px;
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
     }
 }
 }

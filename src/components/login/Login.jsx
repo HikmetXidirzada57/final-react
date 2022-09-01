@@ -22,33 +22,30 @@ const Login = () => {
         e.preventDefault();
         dispatch(loginAction(email,password))
     }
-    // const { login,
-    //   handleSubmit,
-    //     formState: { errors,isSubmitting,isValid } } = useForm({mode:"all"});
+
     useEffect(()=>{
       if(userInfo && userInfo.token){
         navi("/")
       }
     },[navi,userInfo])
   return (
-    <div className="container my-5 for-login">
+    <div className="container my-5">
     <div className="row justify-content-center">
-      <div className="col-lg-3">
+      <div className="col-lg-3  user-background for-login p-3">
         <div className="logo text-center d-flex justify-content-center">
         <Avatar sx={{ m: 1, bgcolor: 'secondary.main'}} className='text-center'>
             <VpnKeyOutlinedIcon sx={{color:"blue"}}/>
           </Avatar>
         </div>
-      
-          <Typography component="h2" variant="h5" color={`black`} style={{fontWeight:"600"}} className="mb-4">
+          <Typography component="h2" variant="h5" color={`black`} style={{fontFamily:"serif"}} className="mb-4">
             L o g i n
           </Typography>
 
 
         <form method="post" onSubmit={submitForm}>
           <div className="form-outline mb-4">
-          <label className="form-label" for="form2Example1" style={{style:"italic"}}>
-              Email address
+          <label className="form-label" for="form2Example1" style={{fontStyle:"oblique"}}>
+            Email
             </label>
             <input
               onChange={(e) => setEmail(e.target.value)}
@@ -62,7 +59,7 @@ const Login = () => {
           </div>
 
           <div className="form-outline mb-4">
-          <label className="form-label" for="form2Example2">
+          <label className="form-label" for="form2Example2" >
               Password
             </label>
             <input
@@ -80,8 +77,7 @@ const Login = () => {
                   className="form-check-input"
                   type="checkbox"
                   value=""
-                  id="form2Example31"
-                  checked
+                  name="remeberme"
                 />
                 <label className="form-check-label" for="form2Example31">
                   {" "}
@@ -95,7 +91,7 @@ const Login = () => {
             </div>
           </div>
 
-          <button type="submit" className="btn btn-primary btn-block mb-4">
+          <button type="submit" className="btn btn-primary btn-block mb-4 px-4" style={{fontFamily:"cursive"}}>
             Sign Up
           </button>
 

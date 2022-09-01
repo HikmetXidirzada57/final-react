@@ -76,6 +76,7 @@ a{
   line-height: 25px;
   font-size: 25px;
   font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 0px;
   color: #000;
   margin-left: 5px;
@@ -83,7 +84,18 @@ a{
 .title-outer{
   text-align: left;
 }
-
+.blog-detail img{
+  height: 300px;
+  vertical-align: middle;
+}
+.related-blogs{
+  background-color: #61dafb;
+  padding: 30px ;
+}
+.user-background{
+background-color: #e3f2fb;
+}
+.related-blogs
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -94,6 +106,7 @@ a{
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;
