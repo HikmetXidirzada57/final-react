@@ -7,46 +7,56 @@ import { Slider } from "@mui/material";
 import "./shop.scss";
 import SingleProducts from "../components/best-seller-single/SingleProducts";
 import ScrollToTop from "react-scroll-to-top";
-import ReactPaginate from "react-paginate";
 import { API_URL } from "../link/URL";
 import axios from "axios";
+import Pagination from "../components/paginate/Pagination";
 
 function valuetext(value) {
   return `${value} AZN`;
 }
-const handlePageClick = () => {};
 
 const Shop = () => {
   const [price, setPrice] = React.useState([0, 10000]);
   const [tag, setTag] = useState([]);
   const [products, setProducts] = useState([]);
   const [sortBy, setsortBy] = useState(2);
-  const [loading, setLoading] = useState(false);
-  const handleChange = (event, newValue) => {
-    setPrice(newValue);
-  };
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(8);
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = products.slice(firstPostIndex, lastPostIndex);
 
   const getAllProducts = useCallback(async () => {
-    const res = await axios.post(`${API_URL}/product/filter`, {
-      minPrice: price[0],
-      maxPrice: price[1],
-      sortBy,
-    });
+    const res = await axios.post(
+      `${API_URL}/product/filter?_page=100&page=1&sparkline=false`,
+      {
+        minPrice: price[0],
+        maxPrice: price[1],
+        sortBy,
+      }
+    );
     setProducts(res.data.products);
   }, [price, sortBy]);
+  useEffect(() => {
+    getAllProducts();
+  }, [getAllProducts]);
+
 
   const getAllTags = async () => {
     const { data } = await axios.get(API_URL + "/tag/getAll");
     setTag(data);
   };
 
+
+  const handleChange = (event, newValue) => {
+    setPrice(newValue);
+    console.log(event);
+ };
+
   useEffect(() => {
     getAllTags();
   }, []);
-
-  useEffect(() => {
-    getAllProducts();
-  }, [getAllProducts]);
 
   return (
     <div id="shop-area">
@@ -128,31 +138,18 @@ const Shop = () => {
           </div>
 
           <div className="row justify-content-between">
-            {products?.map((pro) => (
+            {currentPosts?.map((currentPosts) => (
               <div className="col-lg-3 col-md-4 col-sm-6">
-                <SingleProducts loading={loading} key={pro.id} data={pro}/>
+                <SingleProducts key={currentPosts.id} data={currentPosts} />
               </div>
             ))}
           </div>
           <div className="wcommerce-pagination">
-            <ReactPaginate
-              previousLabel={"previous"}
-              nextLabel={"next"}
-              breakLabel={"..."}
-              pageCount={10}
-              marginPagesDisplayed={2}
-              pageRangeDisplayed={3}
-              onPageChange={handlePageClick}
-              containerClassName={"pagination justify-content-center"}
-              pageClassName={"page-item"}
-              pageLinkClassName={"page-link"}
-              previousClassName={"page-item"}
-              previousLinkClassName={"page-link"}
-              nextClassName={"page-item"}
-              nextLinkClassName={"page-link"}
-              breakClassName={"page-item"}
-              breakLinkClassName={"page-link"}
-              activeClassName={"active"}
+            <Pagination
+              totalPosts={products.length}
+              postsPerPage={postsPerPage}
+              setCurrentPage={setCurrentPage}
+              currentPage={currentPage}
             />
           </div>
         </div>

@@ -110,16 +110,14 @@ const ProductDetail = () => {
                       "--swiper-pagination-color": "#fff",
                     }}
                     spaceBetween={10}
-                    // navigation={true}
-                    // thumbs={{ swiper: thumbsSwiper }}
                     modules={[FreeMode, Navigation, Thumbs]}
                     className="mySwiper2"
                   >
                     <SwiperSlide>
                       <Zoom
                         zoomScale={1.5}
-                        width={500}
-                        height={500}
+                        width={400}
+                        height={400}
                         transitionTime={0.5}
                         img={oneProduct.photoUrl}
                       />
@@ -130,6 +128,7 @@ const ProductDetail = () => {
                         className="img-fluid"
                         src={oneProduct.photoUrl}
                         alt=""
+                        style={{objectFit:"fill"}}
                       />
                     </SwiperSlide>
                   </Swiper>
@@ -180,7 +179,7 @@ const ProductDetail = () => {
                         </span>
                       </>
                     ) : (
-                      <del className="price-pr">$100.00</del>
+                      <strong className="price-pr">$100.00</strong>
                     )}
                   </div>
                   <div className="wo-product-details">
@@ -252,6 +251,21 @@ const ProductDetail = () => {
                 spaceBetween={10}
                 slidesPerView={5}
                 navigation
+                breakpoints={{
+                  375:{
+                   slidesPerView:1
+                  },
+      
+                    576: {
+                      // width: 576,
+                      slidesPerView: 2,
+                    },
+                    768: {
+                      // width: 768,
+                      slidesPerView: 5,
+                    },
+                    
+                  }}
               >
                 {related?.map((rel) => (
                   <SwiperSlide key={rel.id}>

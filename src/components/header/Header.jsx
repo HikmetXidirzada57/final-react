@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import logo from "../../images/logo.png";
+// import logo2 from "../../images/3b0932c1fa2ce26f3794218380fcdb6f.jpeg"
 import "./header.scss";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import HeadsetMicOutlinedIcon from "@mui/icons-material/HeadsetMicOutlined";
@@ -29,7 +30,7 @@ const Header = () => {
   };
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 0) {
+    if (this.pageYOffset > 250) {
       setHeadTop("active-header");
       setHeadBut("active-top");
     } else {

@@ -27,7 +27,7 @@ const Allteam = () => {
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={4}
-          autoPlay
+          loop={true }
         >
           { member && member.map((team) => (
             <SwiperSlide key={team.id}>

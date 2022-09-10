@@ -40,7 +40,7 @@
     .text-blog{
         text-align: left;
         position: relative;
-        width: 65%;
+        // width: 85%;
         background-color: #fff;
         padding: 10px 40px 10px 10px;
         border-radius: 5px;
@@ -122,4 +122,37 @@
       
     }
 
+}
+
+// swiper responsive ////
+@media screen and (min-width: 576px) {
+    .swiper-container {
+      width: 576px;
+    }
+  .swiper{
+    .swiper-slide{
+        .text-left{
+            h2{
+                font-size: 35px;
+            }
+        }
+    }
+  }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .swiper-container {
+      width: 768px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .swiper {
+     .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
 }

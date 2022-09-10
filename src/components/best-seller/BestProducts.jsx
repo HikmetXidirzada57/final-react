@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -25,33 +25,28 @@ const BestProducts = () => {
             <h1>Bestseller Products</h1>
           </div>
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={10}
             slidesPerView={5}
             navigation
-          //   breakpoints={{
-          //     // when window width is >= 640px
-          //     375:{
-          //      width:1000,
-          //      slidesPerView:1,
-          //     },
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              375: {
+                slidesPerView: 1,
+              },
 
-          //     640: {
-          //       width: 1000,
-          //       slidesPerView: 1,
-          //     },
-          //     // when window width is >= 768px
-          //     768: {
-          //       width: 1768,
-          //       slidesPerView: 2,
-          //     },
-          //     1024:{
-          //       width:10000,
-          //       sliderPerview:1
-          //     },
-
-          //   }
-          // }
+              576: {
+                // width: 576,
+                slidesPerView: 2,
+              },
+              768: {
+                // width: 768,
+                slidesPerView: 5,
+              },
+            }}
           >
             {products.map((pro) => (
               <SwiperSlide key={pro.id}>

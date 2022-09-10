@@ -33,21 +33,19 @@
             .cat-item-parent{
                 position: relative;
                 .drop{
-                    background: black !important;
+                    background: rgba(52, 75, 207, 0.729);
                     width: 100%;
                     border-radius: 5px;
+                    padding: 5px;
                     margin-top: 5px;
-                    transition: 0.6s ease-in-out;
                     display: none;
+                    transition: 0.6s ease-in-out;
                     li{
                         color: #fff;
                         font-weight: 600;
                         font-family: Arial, Helvetica, sans-serif;
                     }
-                    &.active-drop{
-                        padding: 15px;
-                        display: block;
-                    }
+             
                 }
                 .expandble-icon{
                     cursor: pointer;

@@ -18,10 +18,10 @@ export const loginAction = (email,password)=>async(dispatch)=>{
     }
 }
 
-export const registerAction=(firstName,lastName,email,password,confirmPassword)=>async(dispatch,getState)=>{
+export const registerAction=(email,firstName,lastName,password,confirmPassword)=>async(dispatch,getState)=>{
     try {
         dispatch({type:REGISTER_USER_REQUEST})
-        const {data}= await axios.post(`${API_URL}/account/register`,{firstName,lastName,email,password,confirmPassword})   
+        const {data}= await axios.post(`${API_URL}/account/register`,{email,firstName,lastName,password,confirmPassword})   
         dispatch({
             type:REGISTER_USER_SUCCESS,
             payload:data

@@ -112,7 +112,7 @@
   // header top end -///
 
   .header-bottom{
-    transition: 0.5s ease-in-out;
+    transition: 0.8s ease-in-out;
     
   ul{
     list-style: none;
@@ -138,6 +138,7 @@
       width: 100%;
       position: fixed;
       z-index: 999;
+      padding: 10px 10px 5px 10px;
       background-color: #100f0ff1;
       .header-top{
         display: none;

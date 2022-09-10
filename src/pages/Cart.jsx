@@ -14,7 +14,6 @@ const Cart = () => {
   const [qty, setQty] = useState(1);
   const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  console.log(qty);
 
   // button increment/decrement functions/////
   const handleIncrement = () => {
@@ -27,6 +26,8 @@ const Cart = () => {
       setQty((prev) => prev - 1);
     }
   };
+  console.log(qty);
+
   ////////////////////////
 
   // add to cart///////
@@ -64,7 +65,7 @@ const Cart = () => {
                   {cartItems?.map((item) => (
                     <tr>
                       <td>
-                        <img width={100} src={item.photoUrl} alt={item.name} />
+                        <img width={100} src={item.photoUrl} alt={item.name}/>
                       </td>
                       <td>
                         <strong>{item.name}</strong>
@@ -78,14 +79,14 @@ const Cart = () => {
                         >
                           -
                         </button>
-                        <button
+                        <input
                           style={{ width: "35%" }}
-                          className="form-control"
+                          className="form-control text-center"
                           type="number"
                           value={qty}
                         />
                         <button
-                          onClick={() => dispatch(addToCart(item.id, 1))}
+                          onClick={() => dispatch(addToCart(item.id, +1))}
                           className="btn btn-lg"
                           onclick={handleIncrement}
                           type="button"
@@ -129,7 +130,7 @@ const Cart = () => {
                       total +
                       (item.dicount > 0 ? item.dicount : item.price) *
                         Number(item.quantity),
-                    1
+                    0
                   )}
                   $
                 </h5>

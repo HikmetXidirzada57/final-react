@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "./recommend.scss";
 import SingleProducts from "../best-seller-single/SingleProducts";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,10 +22,26 @@ const RecProducts = () => {
             <h1>Recommended Products</h1>
           </div>
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
             spaceBetween={10}
             slidesPerView={5}
             navigation
+            autoplay
+            breakpoints={{
+              375:{
+               slidesPerView:1
+              },
+  
+                576: {
+                  // width: 576,
+                  slidesPerView: 2,
+                },
+                768: {
+                  // width: 768,
+                  slidesPerView: 5,
+                },
+                
+              }}
           >
             {prorec.products.map((rec) => (
               <SwiperSlide key={rec.id}>

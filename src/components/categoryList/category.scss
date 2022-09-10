@@ -101,9 +101,7 @@
              line-height: 17px;
              font-size: 13px;
              font-weight: 600;
-             .arrow-right{
-               
-             }
+     
             }
           }
         }
@@ -119,6 +117,25 @@
     padding: 10px 10px;
     min-width: 150px;
      
+      .cat-nav{
+        display: none;
+      }
+     
+    }
+  }
+  @media screen and(max-width:375){
+    .box-category{
+    padding: 10px 10px;
+    min-width: 150px;
+     .sidebar-category{
+      .sidebar-drop{
+        .side-li{
+          .sidebar-dc{
+            top: -10% !important;
+          }
+        }
+      }
+     }
       .cat-nav{
         display: none;
       }

@@ -35,7 +35,8 @@ const SingleProducts = ({ data }) => {
     dispatch(AddToCart(id, quantity));
   };
   return (
-      <div className="owl-item">
+    <div className="col-lg-12 col-mg-12 col-sm-12">
+      <div className=" owl-item">
         {data  ? (
           <div key={data.id}>
             <img className="img-fluid" src={data.photoUrl} alt=""/>
@@ -89,6 +90,8 @@ const SingleProducts = ({ data }) => {
           </>
         )}
       </div>
+    </div>
+
   );
 };
 

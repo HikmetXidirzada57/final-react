@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Singleblog from "../components/single-blog/Singleblog";
 import { API_URL } from "../link/URL";
 import "./blogdetail.scss";
@@ -64,7 +64,7 @@ const BlogDetail = () => {
                 <div className="col-lg-3" key={relBlog.id}>
                   <img className="img-fluid" src={relBlog.blogPicture} alt="blogImage"/>
                   <div className="info mt-2">
-                  <h4 style={{fontWeight:"600"}}>{relBlog.name}</h4>
+                  <Link to={`/blogDetail/${relBlog.id}`} style={{fontWeight:"600"}}>{relBlog.name}</Link>
                   <p style={{fontStyle:"italic"}}>{relBlog.description}</p>
                   </div>
                 </div>

@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import { useSelector, useDispatch } from "react-redux";
 import './blog.scss'
 import { blogListAction } from '../../Redux/Actions/BlogAction';
@@ -27,14 +27,30 @@ const Blog = () => {
             <h1>From The Blog</h1>
           </div>
           <Swiper
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
-              spaceBetween={50}
-              slidesPerView={2}
+              modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
+              spaceBetween={10}
+              slidesPerView={3}
               loop={true}
               autoplay={{
-                  delay: 500,
+                  delay: 1500,
                   disableOnInteraction: false
               }}
+
+              breakpoints={{
+                375:{
+                 slidesPerView:1
+                },
+    
+                  576: {
+                    // width: 576,
+                    slidesPerView: 2,
+                  },
+                  768: {
+                    // width: 768,
+                    slidesPerView: 3,
+                  },
+                  
+                }}
           >
             {blogs && blogs.map((data)=>(
                <SwiperSlide key={data.id}>

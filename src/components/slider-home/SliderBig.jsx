@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import imgBanner from "../../images/main-banner-2.jpg";
 import Roll from "react-reveal/Roll";
 import Fade from "react-reveal/Fade";
@@ -27,39 +27,19 @@ const SliderBig = () => {
 
 
   return (
-    // <div className="col-lg-12 col-md-12 col-sm-12">
     <div className="slider-range">
       <ScrollToTop smooth top="20" color="black" />
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        // spaceBetween={50}
+        modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
         slidesPerView={1}
         navigation
         loop={true}
         autoplay={{
-            delay: 100,
-            disableOnInteraction: false
-        }}
-        // breakpoints={{
-        //   // when window width is >= 640px
-        //   640: {
-        //     width: 640,
-        //     slidesPerView: 1,
-        //   },
-        //   // when window width is >= 768px
-        //   768: {
-        //     width: 768,
-        //     slidesPerView: 2,
-        //   },
-        //   1024:{
-        //     width:1000,
-        //     sliderPerview:1
-        //   },
-        //   2048:{
-        //     width:11000,
-        //     sliderPerview:1
-        //   }
-        // }}
+           delay: 2000,
+           disableOnInteraction: false,
+           pauseOnMouseEnter:true,
+           waitForTransition:true
+          }}
       >
         <SwiperSlide>
           <Pulse>
@@ -101,11 +81,7 @@ const SliderBig = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      {/* <div className="top-up">
-          <KeyboardArrowUpIcon className="arrow-up"/>
-      </div> */}
     </div>
-    // </div>
   );
 };
 

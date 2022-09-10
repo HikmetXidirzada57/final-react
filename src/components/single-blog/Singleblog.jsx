@@ -13,7 +13,7 @@ const Singleblog = ({data}) => {
     <div className="blog-item">
       {data && (
       <div className="col-lg-12" key={data.id}>
-      <div className="d-flex flex-wrap">
+      <div className="col-lg-10">
           <div className="img-blog">
             <img className="img-fluid" src={data.blogPicture} alt="blogimage"/>
             <div className="hover-blog">
@@ -31,7 +31,7 @@ const Singleblog = ({data}) => {
           </div>
           <div className="text-blog">
             <div className="title">
-              <Link to={`blogDetail/${data.id}`}>{data.name}</Link>
+              <Link to={`/blogDetail/${data.id}`}>{data.name}</Link>
             </div>
             <div className="date-post">
               <p>{formatDate}</p>

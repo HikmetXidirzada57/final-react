@@ -1,40 +1,77 @@
-import { Avatar, Box, Container, CssBaseline, TextField, Typography } from '@mui/material'
-import React from 'react'
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import { LoadingButton } from '@mui/lab';
-import { registerAction } from '../../Redux/Actions/UserActions';
-import { useDispatch } from 'react-redux';
-import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import {
+  Avatar,
+  Box,
+  Container,
+  CssBaseline,
+  TextField,
+  Typography,
+} from "@mui/material";
+import React from "react";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import { LoadingButton } from "@mui/lab";
+import { registerAction } from "../../Redux/Actions/UserActions";
+import { useDispatch, useSelector } from "react-redux";
+import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Message } from "@mui/icons-material";
 
 const Register = () => {
-    const dispatch=useDispatch()
-    const { register,
-            handleSubmit,
-            formState: { errors,isSubmitting,isValid } } = useForm({mode:"all"});
-        const handleFormSubmit = (data) => {  
-         
-        dispatch(registerAction(data.email,data.firstName,data.lastName,data.password,data.confirmPassword))
-        };
+  const { userInfo } = useSelector((st) => st.userRegister);
+  const navi = useNavigate();
+
+  const dispatch = useDispatch();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting, isValid },
+  } = useForm({ mode: "all" });
+
+  const handleFormSubmit = (data) => {
+    dispatch(
+      registerAction(
+        data.email,
+        data.firstName,
+        data.lastName,
+        data.password,
+        data.confirmPassword
+      )
+    );
+    console.log(data);
+  };
+
+  useEffect(() => {
+    if (userInfo) {
+      navi("/login");
+    }else{
+      prompt("Not completed!")
+    }
+  }, [navi, userInfo]);
+
   return (
-    <div className='background-components'>
-       <Container component="main" maxWidth="xs"> 
+    <div className="background-components">
+      <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
             marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon/>
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+            <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5" color={`black`}>
-           R e g i s t e r
+            R e g i s t e r
           </Typography>
-          <Box component="form" onSubmit={handleSubmit(handleFormSubmit)} noValidate sx={{ mt: 1 }}>
+          <Box
+            component="form"
+            onSubmit={handleSubmit(handleFormSubmit)}
+            noValidate
+            sx={{ mt: 1 }}
+          >
             <TextField
               margin="normal"
               required={true}
@@ -48,7 +85,7 @@ const Register = () => {
               error={!!errors?.email?.message}
               helperText={errors?.email?.message}
             />
-                 <TextField
+            <TextField
               margin="normal"
               required
               fullWidth
@@ -60,9 +97,8 @@ const Register = () => {
               {...register("firstName", { required: "first name is required" })}
               error={!!errors?.firstName?.message}
               helperText={errors?.firstName?.message}
-
             />
-                 <TextField
+            <TextField
               margin="normal"
               required
               fullWidth
@@ -75,7 +111,7 @@ const Register = () => {
               error={!!errors?.lastName?.message}
               helperText={errors?.lastName?.message}
             />
-             <TextField
+            <TextField
               margin="normal"
               required
               fullWidth
@@ -88,7 +124,7 @@ const Register = () => {
               error={!!errors.password}
               helperText={errors?.password?.message}
             />
-                <TextField
+            <TextField
               margin="normal"
               required
               fullWidth
@@ -97,7 +133,9 @@ const Register = () => {
               type="ConfirmPassword"
               id="confirmPassword"
               autoComplete="confirm-password"
-              {...register("confirmPassword", { required: "confirm password is required" })}
+              {...register("confirmPassword", {
+                required: "confirm password is required",
+              })}
               error={!!errors?.confirmPassword?.message}
               helperText={errors?.confirmPassword?.message}
             />
@@ -107,18 +145,20 @@ const Register = () => {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-             Register
+              Register
             </LoadingButton>
-        
           </Box>
         </Box>
-        <p>
-       Already have account?
-    <Link to="/login"> Log In </Link>
+        <p className="alert-success p-2">
+          Already have account?
+          <Link to="/login" style={{ fontStyle: "oblique" }}>
+            {" "}
+            <b>Log In</b>{" "}
+          </Link>
         </p>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
