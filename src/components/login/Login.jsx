@@ -12,6 +12,7 @@ import { useForm } from 'react-hook-form';
 
 import { Avatar, Typography } from '@mui/material';
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
+import Swal from 'sweetalert2';
 const Login = () => {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
@@ -24,8 +25,15 @@ const Login = () => {
     }
 
     useEffect(()=>{
-      if(userInfo && userInfo.token){
+      if(userInfo && userInfo.token && userInfo.status===200){
         navi("/")
+      }else{
+        Swal.fire({
+          icon: 'error',
+          title: 'something is wrong...',
+          text: 'Email or password is incorrect!',
+          footer: '<a href="">Why do I have this issue?</a>'
+        })
       }
     },[navi,userInfo])
   return (
@@ -38,7 +46,7 @@ const Login = () => {
           </Avatar>
         </div>
           <Typography component="h2" variant="h5" color={`black`} style={{fontFamily:"serif"}} className="mb-4">
-            L o g i n
+            L o g i n 
           </Typography>
 
 

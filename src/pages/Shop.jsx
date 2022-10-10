@@ -38,6 +38,7 @@ const Shop = () => {
     );
     setProducts(res.data.products);
   }, [price, sortBy]);
+
   useEffect(() => {
     getAllProducts();
   }, [getAllProducts]);
@@ -51,7 +52,6 @@ const Shop = () => {
 
   const handleChange = (event, newValue) => {
     setPrice(newValue);
-    console.log(event);
  };
 
   useEffect(() => {
